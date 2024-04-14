@@ -41,19 +41,20 @@ const Footer = () => {
           <div className="footer-section contact">
             <h3>Contact Us</h3>
             <p>
-              <i className="fas fa-map-marker-alt"></i> 123 Bookstore Street, Reading City
+              <i className="fas fa-map-marker-alt"></i> 123 An duong vuong, HCM
             </p>
             <p>
               <i className="fas fa-phone"></i> (123) 456-7890
             </p>
             <p>
-              <i className="fas fa-envelope"></i> info@bookstore.com
+              <i className="fas fa-envelope"></i> khoiminhdoan@bookstore.com
             </p>
           </div>
         </div>
         
         <div className="footer-bottom">
           <p>&copy; {currentYear} Bookstore. All rights reserved.</p>
+          <p>Developed by Khoi Minh Doan</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getUserByUsername, updateUser } from '../services/userApi';
 import './UserProfilePage.css';
 
 const UserProfilePage = () => {
@@ -8,7 +9,7 @@ const UserProfilePage = () => {
   const [orderHistory, setOrderHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({
-    name: '',
+    fullName: '',
     email: '',
     phone: '',
     address: '',
@@ -19,63 +20,35 @@ const UserProfilePage = () => {
   });
   const [isEditing, setIsEditing] = useState(false);
   const [errors, setErrors] = useState({});
+  const [success, setSuccess] = useState('');
+
+  // Lấy username từ localStorage (hoặc context)
+  const username = localStorage.getItem('username');
 
   useEffect(() => {
-    // Simulate API call to get user data
-    setTimeout(() => {
-      const mockUserData = {
-        id: 1,
-        name: 'John Doe',
-        email: 'john.doe@example.com',
-        phone: '(555) 123-4567',
-        address: '123 Book St',
-        city: 'Reading',
-        state: 'CA',
-        zip: '90210',
-        country: 'USA',
-        avatar: null
-      };
-      
-      const mockOrderHistory = [
-        {
-          id: 'ORD-1234',
-          date: '2023-04-15',
-          total: 54.97,
-          status: 'Delivered',
-          items: [
-            { id: 1, title: 'The Great Gatsby', quantity: 1, price: 12.99 },
-            { id: 2, title: 'To Kill a Mockingbird', quantity: 2, price: 10.99 },
-            { id: 3, title: '1984', quantity: 1, price: 9.99 }
-          ]
-        },
-        {
-          id: 'ORD-5678',
-          date: '2023-03-22',
-          total: 32.95,
-          status: 'Delivered',
-          items: [
-            { id: 4, title: 'Pride and Prejudice', quantity: 1, price: 8.99 },
-            { id: 5, title: 'The Catcher in the Rye', quantity: 1, price: 11.99 },
-            { id: 6, title: 'Animal Farm', quantity: 1, price: 7.99 }
-          ]
-        }
-      ];
-      
-      setUserData(mockUserData);
-      setOrderHistory(mockOrderHistory);
-      setFormData({
-        name: mockUserData.name,
-        email: mockUserData.email,
-        phone: mockUserData.phone || '',
-        address: mockUserData.address || '',
-        city: mockUserData.city || '',
-        state: mockUserData.state || '',
-        zip: mockUserData.zip || '',
-        country: mockUserData.country || ''
-      });
+    if (!username) {
       setLoading(false);
-    }, 1000);
-  }, []);
+      return;
+    }
+    setLoading(true);
+    getUserByUsername(username)
+      .then(user => {
+        setUserData(user);
+        setOrderHistory(user.orders || []);
+        setFormData({
+          fullName: user.fullName || '',
+          email: user.email || '',
+          phone: user.phone || '',
+          address: user.address || '',
+          city: user.city || '',
+          state: user.state || '',
+          zip: user.zip || '',
+          country: user.country || ''
+        });
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [username]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -87,8 +60,6 @@ const UserProfilePage = () => {
       ...formData,
       [name]: value
     });
-    
-    // Clear errors when typing
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -100,7 +71,7 @@ const UserProfilePage = () => {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.fullName.trim()) newErrors.fullName = 'Name is required';
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -112,11 +83,11 @@ const UserProfilePage = () => {
   };
 
   const handleEditToggle = () => {
-    if (isEditing) {
-      // Reset form data to original user data
+    if (isEditing && userData) {
+      // Nếu đang ở chế độ chỉnh sửa và ấn Cancel, reset form về dữ liệu gốc
       setFormData({
-        name: userData.name,
-        email: userData.email,
+        fullName: userData.fullName || '',
+        email: userData.email || '',
         phone: userData.phone || '',
         address: userData.address || '',
         city: userData.city || '',
@@ -127,29 +98,36 @@ const UserProfilePage = () => {
       setErrors({});
     }
     setIsEditing(!isEditing);
+    setSuccess('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-    
+    if (!validateForm()) return;
     setLoading(true);
-    
-    // Simulate API call to update user data
-    setTimeout(() => {
-      // Update userData with formData
-      setUserData({
-        ...userData,
-        ...formData
+    setSuccess('');
+    setErrors({});
+    try {
+      // Gửi dữ liệu mới lên backend
+      const updated = await updateUser(userData.id, formData);
+      // Cập nhật lại userData và formData với dữ liệu mới
+      setUserData(updated);
+      setFormData({
+        fullName: updated.fullName || '',
+        email: updated.email || '',
+        phone: updated.phone || '',
+        address: updated.address || '',
+        city: updated.city || '',
+        state: updated.state || '',
+        zip: updated.zip || '',
+        country: updated.country || ''
       });
       setIsEditing(false);
-      setLoading(false);
-      
-      alert('Profile updated successfully!');
-    }, 1000);
+      setSuccess('Profile updated successfully!');
+    } catch (err) {
+      setErrors({ api: 'Failed to update profile' });
+    }
+    setLoading(false);
   };
 
   if (loading && !userData) {
@@ -163,17 +141,6 @@ const UserProfilePage = () => {
         
         <div className="profile-content">
           <div className="profile-sidebar">
-            <div className="user-avatar">
-              {userData.avatar ? (
-                <img src={userData.avatar} alt={userData.name} />
-              ) : (
-                <div className="avatar-placeholder">
-                  {userData.name.charAt(0)}
-                </div>
-              )}
-              <h3>{userData.name}</h3>
-              <p>{userData.email}</p>
-            </div>
             
             <nav className="profile-nav">
               <button
@@ -214,17 +181,17 @@ const UserProfilePage = () => {
                 <form onSubmit={handleSubmit} className="profile-form">
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="name">Full Name</label>
+                      <label htmlFor="fullName">Full Name</label>
                       <input
                         type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
+                        id="fullName"
+                        name="fullName"
+                        value={formData.fullName}
                         onChange={handleChange}
                         disabled={!isEditing}
-                        className={errors.name ? 'error' : ''}
+                        className={errors.fullName ? 'error' : ''}
                       />
-                      {errors.name && <div className="error-message">{errors.name}</div>}
+                      {errors.fullName && <div className="error-message">{errors.fullName}</div>}
                     </div>
                     
                     <div className="form-group">

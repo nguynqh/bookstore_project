@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import allBooks from '../data/books';
+import booksData from '../data/books.json';
 import './BookDetailPage.css';
 
 const BookDetailPage = () => {
@@ -13,7 +13,7 @@ const BookDetailPage = () => {
   useEffect(() => {
     // Simulate API call
     setTimeout(() => {
-      const foundBook = allBooks.find(book => book.id === parseInt(id));
+      const foundBook = booksData.books.find(book => book.id === parseInt(id));
       setBook(foundBook);
       setLoading(false);
     }, 500);
@@ -50,31 +50,19 @@ const BookDetailPage = () => {
         
         <div className="book-detail">
           <div className="book-image">
-            <img src={book.coverImage || '/default-book-cover.jpg'} alt={book.title} />
+            <img src={book.image || '/default-book-cover.jpg'} alt={book.title} />
           </div>
           
           <div className="book-info">
             <h1>{book.title}</h1>
             <p className="author">by <span>{book.author}</span></p>
             <p className="category">{book.category}</p>
-            <div className="price">${book.price.toFixed(2)}</div>
+            <div className="price">{book.price.toLocaleString('vi-VN')} VNĐ</div>
             
             <div className="book-stats">
               <div className="stat">
-                <span className="label">ISBN:</span>
-                <span className="value">{book.isbn || 'N/A'}</span>
-              </div>
-              <div className="stat">
-                <span className="label">Published:</span>
-                <span className="value">{book.publishedDate || 'N/A'}</span>
-              </div>
-              <div className="stat">
-                <span className="label">Pages:</span>
-                <span className="value">{book.pages || 'N/A'}</span>
-              </div>
-              <div className="stat">
-                <span className="label">Available:</span>
-                <span className="value">{book.inStock ? 'Yes' : 'No'}</span>
+                <span className="label">Stock:</span>
+                <span className="value">{book.stock}</span>
               </div>
             </div>
             
@@ -83,27 +71,29 @@ const BookDetailPage = () => {
               <p>{book.description || 'No description available.'}</p>
             </div>
             
-            <div className="purchase-options">
+            <div className="add-to-cart">
               <div className="quantity-selector">
                 <label htmlFor="quantity">Quantity:</label>
-                <select 
-                  id="quantity" 
-                  value={quantity} 
+                <select
+                  id="quantity"
+                  value={quantity}
                   onChange={handleQuantityChange}
-                  disabled={!book.inStock}
+                  disabled={book.stock === 0}
                 >
-                  {[...Array(10).keys()].map(num => (
-                    <option key={num + 1} value={num + 1}>{num + 1}</option>
+                  {[...Array(Math.min(book.stock, 10))].map((_, i) => (
+                    <option key={i + 1} value={i + 1}>
+                      {i + 1}
+                    </option>
                   ))}
                 </select>
               </div>
               
-              <button 
-                className="add-to-cart-btn" 
+              <button
+                className="add-to-cart-button"
                 onClick={handleAddToCart}
-                disabled={!book.inStock}
+                disabled={book.stock === 0}
               >
-                <i className="fas fa-shopping-cart"></i> Add to Cart
+                {book.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
               </button>
             </div>
           </div>

@@ -12,7 +12,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import allBooks from '../data/books';
+import booksData from '../data/books.json';
 import './HomePage.css';
 
 ChartJS.register(
@@ -27,6 +27,7 @@ ChartJS.register(
 );
 
 const HomePage = () => {
+  const [books] = useState(booksData.books);
   const [featuredBooks, setFeaturedBooks] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -62,11 +63,11 @@ const HomePage = () => {
    //set loading books :))
     setTimeout(() => {
       // mày thì học trên mạng lấy có cách random cũng vui vui :))
-      const shuffled = [...allBooks].sort(() => 0.5 - Math.random());
+      const shuffled = [...books].sort(() => 0.5 - Math.random());
       setFeaturedBooks(shuffled.slice(0, 10));
       
       // Extract unique categories
-      const uniqueCategories = [...new Set(allBooks.map(book => book.category))];
+      const uniqueCategories = [...new Set(books.map(book => book.category))];
       setCategories(uniqueCategories);
       
       setLoading(false);
@@ -85,7 +86,7 @@ const HomePage = () => {
           <p>Discover the joy of reading with our vast collection of books</p>
           <Link to="/books" className="browse-button">Browse Books</Link>
         </div>
-        <div className="chart-controls">
+        {/* <div className="chart-controls">
           <button onClick={() => setChartType('bar')} className={chartType === 'bar' ? 'active' : ''}>
             Bar Chart
           </button>
@@ -95,8 +96,8 @@ const HomePage = () => {
           <button onClick={() => setChartType('line')} className={chartType === 'line' ? 'active' : ''}>
             Line Chart
           </button>
-        </div>
-        <div className="chart-container">{renderChart()}</div>
+        </div> */}
+        {/* <div className="chart-container">{renderChart()}</div> */}
       </div>
       
       <div className="container">
@@ -107,7 +108,7 @@ const HomePage = () => {
               <div key={book.id} className="featured-book-card">
                 <Link to={`/book/${book.id}`}>
                   <div className="book-cover">
-                    <img src={book.coverImage || '/default-book-cover.jpg'} alt={book.title} />
+                    <img src={book.image || '/default-book-cover.jpg'} alt={book.title} />
                   </div>
                   <div className="book-info">
                     <h3>{book.title}</h3>
