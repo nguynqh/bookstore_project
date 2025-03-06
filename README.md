@@ -8,7 +8,11 @@
 
 ## Thành viên nhóm
 
-[Điền thông tin thành viên nhóm]
+| STT | Họ và tên | MSSV |
+|-----|-----------|------|
+| 1 | Nguyễn Quang Hiếu | 3121411071 |
+| 2 | Đoàn Minh Khôi | 3121411106 |
+| 3 | Nguyễn Ngọc Hạnh Nguyên | 312141149 |
 
 ## Website cá nhân
 
