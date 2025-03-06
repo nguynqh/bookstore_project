@@ -84,11 +84,3 @@
 3. Phát triển hệ thống CRM tích hợp
 4. Áp dụng DevOps và CI/CD
 5. Nâng cấp hệ thống lên nền tảng web-based
-
-## 3. Yêu cầu hệ thống
-
-### 3.1 Yêu cầu chức năng
-[Liệt kê các yêu cầu chức năng]
-
-### 3.2 Yêu cầu phi chức năng
-[Liệt kê các yêu cầu phi chức năng]
