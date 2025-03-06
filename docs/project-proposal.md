@@ -1,4 +1,5 @@
 # Project Proposal
+> Xem chi tiết báo cáo đầy đủ tại [Project-proposal (Google Docs)](https://docs.google.com/document/d/183bvzCJ-qwVtFswFlkqvEp7Z50bKNLwNh2xNzaDLQU8/edit?tab=t.0)
 
 ## 1. Thông tin dự án
 - Tên dự án: Quản Lý nhà sách
