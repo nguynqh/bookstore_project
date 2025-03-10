@@ -4,14 +4,14 @@
 
 ### Course Details
 - **Platform:** Udemy
-- **Course Title:** Làm chủ Dịch vụ Vi mô với Spring Boot và Spring Cloud
+- **Course Title:** Làm chủ Microservices với Spring Boot và Spring Cloud
 - **Completion Date:** 2024-12
 
 ### Kiến thức chính
 - Nắm được các nguyên tắc cơ bản của microservices architecture.
 - Triển khai các dịch vụ web bằng Spring Boot.
 - Sử dụng Spring Cloud để khám phá dịch vụ, quản lý cấu hình và cân bằng tải.
-- Các phương pháp hay nhất để xây dựng các dịch vụ vi mô có khả năng mở rộng và phục hồi.
+- Các phương pháp hay nhất để xây dựng các Microservices có khả năng mở rộng và phục hồi.
 
 ### Quy trình quản lý sách
 
