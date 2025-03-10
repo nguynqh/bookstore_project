@@ -35,7 +35,7 @@ Dự án Quản lý nhà sách là một hệ thống phần mềm toàn diện 
 
 ## 5. Công nghệ dự kiến
 - Frontend: React.js, TypeScript
-- Backend: Node.js, Express.js
+- Backend: Node.js, Express.js, Java
 - Database: PostgreSQL
 - ORM: Prisma
 - Authentication: JWT

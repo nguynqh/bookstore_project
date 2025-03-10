@@ -17,7 +17,7 @@
 ## Website cá nhân
 
 - [Đoàn Minh Khôi](https://my-portfolio-git-main-izzys-projects-8588080b.vercel.app/)
-- [Thành viên 2](link_to_personal_github_io)
+- [Nguyễn Quang Hiếu](https://nguynqh.github.io/)
 - ...
 
 ## Links
