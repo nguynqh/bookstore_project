@@ -1,0 +1,65 @@
+.book-list {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background-color: #f8f8f8;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-view, .btn-edit, .btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-view {
+  color: #3f51b5;
+}
+
+.btn-edit {
+  color: #ffb400;
+}
+
+.btn-delete {
+  color: #f44336;
+}
+
+.btn-view:hover, .btn-edit:hover, .btn-delete:hover {
+  background-color: #eaeaea;
+}
+
+.no-books {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}

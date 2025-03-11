@@ -1,0 +1,55 @@
+.categories-page {
+  padding: 2rem 0;
+}
+
+.category-form {
+  margin-bottom: 2rem;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-info h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.books-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.category-actions {
+  display: flex;
+  gap: 0.5rem;
+}
