@@ -4,7 +4,6 @@ import lombok.Setter;
 import lombok.Getter;
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -20,6 +19,6 @@ public class Authors {
     private String biography;
     private Date birth_date;
     private String country;
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+    private Date created_at;
+    private Date updated_at;
 }
