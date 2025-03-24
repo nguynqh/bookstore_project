@@ -1,11 +1,13 @@
-# Lịch trình Dự án Bookstore
+# Kế hoạch Dự án
 
-## Tổng quan dự án
-- **Tên dự án**: Bookstore Management System
-- **Mô tả**: Ứng dụng quản lý hiệu sách với kiến trúc tách biệt frontend và backend
-- **Công nghệ**: Spring Boot (Backend), React (Frontend), MySQL (Database)
+## Project Proposal
+- [Link to Project Proposal Document](docs/project-proposal.md)
+- Ngày hoàn thành: [Date]
+- Trạng thái: [Status]
 
-## Phân công nhiệm vụ
+## Project Plan
+
+### Phân công nhiệm vụ
 | Thành viên | Vai trò | Nhiệm vụ |
 |------------|---------|----------|
 | Đoàn Minh Khôi | Frontend Developer | Thiết kế và phát triển UI/UX, xây dựng giao diện người dùng |
