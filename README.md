@@ -5,6 +5,7 @@
 - `docs/`: Thư mục chứa tài liệu dự án
 - `schedule.md`: Kế hoạch và tiến độ dự án
 - `docs/business-requirements.md`: Báo cáo khảo sát hiện trạng và quy trình nghiệp vụ
+- `assets/screenshots/`: Thư mục chứa các ảnh chụp màn hình website
 
 ## Thành viên nhóm
 
@@ -23,4 +24,22 @@
 ## Links
 
 - [Project Plan](schedule.md)
+
+## Screenshots
+
+### Giao diện người dùng
+
+![Trang chủ](assets/screenshots/home.png)
+
+![Trang danh sách sách](assets/screenshots/book.png)
+
+![Trang thông tin người dùng](assets/screenshots/user.png)
+![Trang đăng nhiệp người dùng](assets/screenshots/login.png)
+
+
+### Bảng điều khiển Admin
+
+![Dashboard Admin](assets/screenshots/admin_dashboard.png)
+
+
 
