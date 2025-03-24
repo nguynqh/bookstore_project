@@ -23,4 +23,4 @@
 ## Links
 
 - [Project Plan](schedule.md)
-- [Báo cáo khảo sát](docs/business-requirements.md)
+
