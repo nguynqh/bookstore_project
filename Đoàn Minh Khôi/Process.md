@@ -4,6 +4,8 @@
 
 Dự án Bookstore là một ứng dụng quản lý hiệu sách được phát triển nhằm mục đích áp dụng các công nghệ lập trình hiện đại. Hệ thống được thiết kế theo kiến trúc phân tách giữa frontend và backend, cho phép quản lý hiệu quả các quy trình kinh doanh của một hiệu sách.
 
+Với vai trò phụ trách phần giao diện người dùng, tôi tập trung vào việc xây dựng UI/UX chuyên nghiệp, trực quan và thân thiện với người dùng, đảm bảo trải nghiệm mượt mà trên nhiều thiết bị khác nhau.
+
 ### Chức năng chính
 - **Quản lý kho sách:** Thêm, sửa, xóa, tìm kiếm
 - **Quản lý khách hàng và tài khoản:** Hệ thống tài khoản người dùng
@@ -118,14 +120,17 @@ Message: Add initial entity, controller, repository, and service classes for boo
   - Thiết kế bảng điều khiển admin và màn hình quản lý
   - Tạo wireframe cho chức năng giỏ hàng và thanh toán
 - **Thiết kế UI chi tiết**
-  - Xác định bảng màu và phông chữ nhất quán
-  - Thiết kế logo và thương hiệu
-  - Tạo mockup chi tiết cho các màn hình chính
+  - Xác định bảng màu chính: #3498db (primary blue), #2ecc71 (success green), #e74c3c (danger red), #f9f9f9 (background light)
+  - Lựa chọn phông chữ: Roboto cho tiêu đề, Open Sans cho nội dung
+  - Thiết kế logo kết hợp biểu tượng sách và phông chữ serif hiện đại
+  - Tạo mockup chi tiết cho các màn hình chính bằng Figma
 - **Triển khai React Components**
-  - Tạo cấu trúc component dựa trên nguyên tắc tái sử dụng
+  - Thiết lập cấu trúc project React với Create React App
+  - Cài đặt và cấu hình thư viện UI: Material-UI, Styled-components
   - Xây dựng các component cơ bản: Button, Card, Form, Modal, Navigation
+  - Tạo hệ thống layout với Grid và Container components
 
-> *Trong giai đoạn thiết kế, tôi đã dựa trên ERD để đảm bảo rằng giao diện người dùng phản ánh chính xác cấu trúc dữ liệu và hỗ trợ tất cả các chức năng cần thiết. Tôi cũng tập trung vào việc tạo ra trải nghiệm người dùng liền mạch và trực quan.*
+> *Trong giai đoạn thiết kế, tôi đã áp dụng nguyên tắc thiết kế "Mobile First" để đảm bảo trải nghiệm người dùng tốt trên mọi thiết bị. Tôi cũng tập trung vào tính nhất quán trong thiết kế, sử dụng hệ thống Design System để duy trì sự đồng bộ giữa các thành phần UI.*
 
 **Các màn hình chính dựa trên ERD:**
 
