@@ -12,7 +12,7 @@
 |-----|-----------|------|
 | 1 | Nguyễn Quang Hiếu | 3121411071 |
 | 2 | Đoàn Minh Khôi | 3121411106 |
-| 3 | Nguyễn Ngọc Hạnh Nguyên | 312141149 |
+| 3 | Trần Minh Chiến | 3121411028 |
 
 ## Website cá nhân
 
