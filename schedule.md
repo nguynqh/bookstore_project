@@ -1,9 +1,6 @@
 # Kế hoạch Dự án
 
-## Project Proposal
-- [Link to Project Proposal Document](docs/project-proposal.md)
-- Ngày hoàn thành: [Date]
-- Trạng thái: [Status]
+
 
 ## Project Plan
 
