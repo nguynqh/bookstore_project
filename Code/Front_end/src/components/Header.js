@@ -29,6 +29,14 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+          <div className="user-actions">
+            <Link to="/profile" className="user-icon">
+              <i className="fas fa-user"></i>
+            </Link>
+            <Link to="/login" className="logout-btn">
+              <i className="fas fa-sign-out-alt"></i> Logout
+            </Link>
+          </div>
         </div>
       </div>
     </header>

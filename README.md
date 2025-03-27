@@ -5,6 +5,7 @@
 - `docs/`: Thư mục chứa tài liệu dự án
 - `schedule.md`: Kế hoạch và tiến độ dự án
 - `docs/business-requirements.md`: Báo cáo khảo sát hiện trạng và quy trình nghiệp vụ
+- `assets/screenshots/`: Thư mục chứa các ảnh chụp màn hình website
 
 ## Thành viên nhóm
 
@@ -12,7 +13,7 @@
 |-----|-----------|------|
 | 1 | Nguyễn Quang Hiếu | 3121411071 |
 | 2 | Đoàn Minh Khôi | 3121411106 |
-| 3 | Nguyễn Ngọc Hạnh Nguyên | 312141149 |
+| 3 | Trần Minh Chiến | 3121411028 |
 
 ## Website cá nhân
 
@@ -23,4 +24,22 @@
 ## Links
 
 - [Project Plan](schedule.md)
-- [Báo cáo khảo sát](docs/business-requirements.md)
+
+## Screenshots
+
+### Giao diện người dùng
+
+![Trang chủ](assets/screenshots/home.png)
+
+![Trang danh sách sách](assets/screenshots/book.png)
+
+![Trang thông tin người dùng](assets/screenshots/user.png)
+![Trang đăng nhiệp người dùng](assets/screenshots/login.png)
+
+
+### Bảng điều khiển Admin
+
+![Dashboard Admin](assets/screenshots/admin_dashboard.png)
+
+
+
