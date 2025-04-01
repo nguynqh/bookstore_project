@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import CartPage from './pages/CartPage';
 import AddEditBookPage from './pages/AddEditBookPage';
 import UserProfilePage from './pages/UserProfilePage';
+import CategoriesPage from './pages/CategoriesPage';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/book/add" element={<AddEditBookPage />} />
             <Route path="/book/edit/:id" element={<AddEditBookPage />} />
             <Route path="/profile" element={<UserProfilePage />} />
+            <Route path="/categories" element={<CategoriesPage />} />
           </Routes>
         </main>
         <Footer />
