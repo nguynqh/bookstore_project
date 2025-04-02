@@ -2,11 +2,15 @@ package com.bookstore.v1.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Setter
+@Getter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
@@ -18,7 +22,7 @@ public class Users {
     @Column(length = 50, nullable = false, unique = true)
     private String username;
 
-    @Column(length = 50, nullable = false, unique = true)
+    @Column(length = 100, nullable = false, unique = true)
     private String email;
 
     @Column(length = 255, nullable = false)
@@ -51,9 +55,11 @@ public class Users {
     @Column(length = 20)
     private String role = "CUSTOMER";
 
-    @Column(name = "created_at")
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
+    @UpdateTimestamp
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
