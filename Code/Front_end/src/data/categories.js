@@ -1,14 +1,7 @@
-const categories = [
-  { id: 1, name: "Fiction" },
-  { id: 2, name: "Science Fiction" },
-  { id: 3, name: "Mystery" },
-  { id: 4, name: "Romance" },
-  { id: 5, name: "Fantasy" },
-  { id: 6, name: "Biography" },
-  { id: 7, name: "History" },
-  { id: 8, name: "Self-help" },
-  { id: 9, name: "Business" },
-  { id: 10, name: "Children's Books" }
-];
+import books from "./books";
+
+const categories = Array.from(
+  new Set(books.map((book) => book.category))
+).map((category, index) => ({ id: index + 1, name: category }));
 
 export default categories;
