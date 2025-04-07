@@ -1,0 +1,2 @@
+create jar: mvn clean package
+run docker: docker-compose up
