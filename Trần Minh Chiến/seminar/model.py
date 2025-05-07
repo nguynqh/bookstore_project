@@ -1,38 +1,38 @@
-from data import vocab_size  # Import vocab_size từ data.py
-
 import torch
 import torch.nn as nn
-import torchtext.vocab as vocab
+import torchtext.vocab as torchvocab
 
-class LSTMModel(nn.Module):
-    def __init__(self, vocab_size, embedding_dim, hidden_dim, output_dim, pretrained=False):
+
+class RNNModel(nn.Module):
+    def __init__(self, vocab_size, embedding_dim, hidden_dim, output_dim, vocab_dict=None, pretrained=False):
         super().__init__()
+
         if pretrained:
-            glove = vocab.GloVe(name='6B', dim=embedding_dim)
+            print("Loading GloVe embeddings...")
+            glove = torchvocab.GloVe(name='6B', dim=embedding_dim)
             embedding_weights = torch.zeros(vocab_size, embedding_dim)
-            for word, idx in glove.stoi.items():
-                if idx < vocab_size:
-                    embedding_weights[idx] = glove.vectors[idx]
+            for word, idx in vocab_dict.items():
+                if word in glove.stoi:
+                    embedding_weights[idx] = glove[word]
+                else:
+                    embedding_weights[idx] = torch.randn(embedding_dim) * 0.05
             self.embedding = nn.Embedding.from_pretrained(embedding_weights, freeze=False, padding_idx=0)
         else:
             self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
 
-        self.lstm = nn.LSTM(input_size=embedding_dim, hidden_size=hidden_dim, batch_first=True)
-        self.dropout = nn.Dropout(0.5)  # Dropout để giảm overfitting
-        self.fc = nn.Linear(hidden_dim, output_dim)
+        # Bidirectional LSTM + Dropout
+        self.lstm = nn.LSTM(
+            input_size=embedding_dim,
+            hidden_size=hidden_dim,
+            batch_first=True,
+            bidirectional=True
+        )
+        self.dropout = nn.Dropout(0.5)
+        self.fc = nn.Linear(hidden_dim * 2, output_dim)
 
     def forward(self, text):
-        embedded = self.embedding(text)
-        output, (hidden, cell) = self.lstm(embedded)
-        hidden = self.dropout(hidden[-1])  # Áp dụng Dropout
-        logits = self.fc(hidden)
+        embedded = self.embedding(text)                          # (batch_size, seq_len, emb_dim)
+        output, (hidden, cell) = self.lstm(embedded)             # hidden: (num_layers*2, batch, hidden_dim)
+        hidden_cat = torch.cat((hidden[-2], hidden[-1]), dim=1)  # (batch, hidden_dim*2)
+        logits = self.fc(self.dropout(hidden_cat))               # (batch, output_dim)
         return logits
-
-# Khởi tạo mô hình
-model = LSTMModel(
-    vocab_size=vocab_size,  # Sử dụng vocab_size từ data.py
-    embedding_dim=100,
-    hidden_dim=128,
-    output_dim=3,
-    pretrained=True
-)

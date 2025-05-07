@@ -3,40 +3,60 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from nltk.tokenize import word_tokenize
 import nltk
+import re
 from sklearn.model_selection import train_test_split
 from collections import Counter
 
 nltk.download('punkt')
 
-# Đọc dữ liệu từ CSV
+# ====================
+# 1. Tiền xử lý văn bản
+# ====================
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r"[^a-zA-Z0-9\s]", "", text)  # loại bỏ dấu câu và ký tự đặc biệt
+    return text
+
+# Đọc dữ liệu
 data = pd.read_csv('sentiment_data.csv').dropna()
-texts = data['text'].tolist()
+texts = data['text'].apply(clean_text).tolist()
 labels = data['label'].map({'Positive': 0, 'Negative': 1, 'Neutral': 2}).tolist()
 
-# Tokenize và xây dựng từ điển
-tokenized_texts = [word_tokenize(t.lower()) for t in texts]
-all_words = [w for txt in tokenized_texts for w in txt]
-most_common = Counter(all_words).most_common(10000)  # Tăng số lượng từ phổ biến lên 10,000
+# Tokenize
+tokenized_texts = [word_tokenize(t) for t in texts]
 
-vocab = {'<PAD>': 0, '<UNK>': 1}
-for i, (w, _) in enumerate(most_common, 2):
-    vocab[w] = i
+# ====================
+# 2. Tạo từ điển
+# ====================
+def build_vocab(tokenized_texts, vocab_size=5000, min_freq=2):
+    all_words = [w for txt in tokenized_texts for w in txt]
+    word_freq = Counter(all_words)
+    most_common = [w for w, c in word_freq.items() if c >= min_freq]
+    most_common = most_common[:vocab_size - 2]  # trừ 2 cho <PAD> và <UNK>
+    vocab = {'<PAD>': 0, '<UNK>': 1}
+    vocab.update({w: i + 2 for i, w in enumerate(most_common)})
+    return vocab
 
+vocab = build_vocab(tokenized_texts)
 vocab_size = len(vocab)
 
-# Hàm chuyển token thành chỉ số
-def to_indices(tokens, max_len):
-    idxs = [vocab.get(t, 1) for t in tokens][:max_len]
-    return idxs + [0] * (max_len - len(idxs))
+# ====================
+# 3. Chuyển token sang chỉ số
+# ====================
+def to_indices(tokens, vocab, max_len):
+    idxs = [vocab.get(t, 1) for t in tokens][:max_len]  # 1 là <UNK>
+    return idxs + [0] * (max_len - len(idxs))  # pad = 0
 
 max_len_text = 50
-text_indices = [to_indices(t, max_len_text) for t in tokenized_texts]
+text_indices = [to_indices(t, vocab, max_len_text) for t in tokenized_texts]
 
-# Dataset và DataLoader
+# ====================
+# 4. Dataset và Dataloader
+# ====================
 class SentimentDataset(Dataset):
     def __init__(self, texts, labels):
-        self.texts = torch.tensor(texts)
-        self.labels = torch.tensor(labels)
+        self.texts = torch.tensor(texts, dtype=torch.long)
+        self.labels = torch.tensor(labels, dtype=torch.long)
 
     def __len__(self):
         return len(self.labels)
@@ -44,14 +64,13 @@ class SentimentDataset(Dataset):
     def __getitem__(self, idx):
         return self.texts[idx], self.labels[idx]
 
-# Tách tập huấn luyện và kiểm tra
+# Chia train/test
 train_texts, test_texts, train_labels, test_labels = train_test_split(
-    text_indices, labels, test_size=0.2, random_state=42
+    text_indices, labels, test_size=0.2, random_state=42, stratify=labels
 )
 
 train_dataset = SentimentDataset(train_texts, train_labels)
 test_dataset = SentimentDataset(test_texts, test_labels)
 
-train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)  # Giảm batch size xuống 16
-test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
-vocab_size = len(vocab)
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
