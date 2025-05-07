@@ -45,8 +45,12 @@ def train_and_evaluate(model, train_loader, test_loader, epochs=10, lr=0.001):
         test_acc, test_f1 = evaluate(model, test_loader, device)
 
         print(f"Epoch {epoch+1} - Loss: {avg_loss:.4f}, Train Acc: {train_acc:.3f}, Test Acc: {test_acc:.3f}, F1: {test_f1:.3f}")
-
+ # Lưu mô hình sau mỗi epoch
+        model_path = r'D:\bookstore_project\Trần Minh Chiến\seminar\model\RNN_epoch_{}.pth'.format(epoch+1)
+        torch.save(model.state_dict(), model_path)
+        print(f'Model saved to {model_path}')
     return test_acc, test_f1
+
 
 # Thử nghiệm Pretrained vs Scratch
 results = {}
