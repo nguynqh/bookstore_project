@@ -1,5 +1,3 @@
-# Phụ lục A: data.py
-
 import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -18,7 +16,7 @@ labels = data['label'].map({'Positive': 0, 'Negative': 1, 'Neutral': 2}).tolist(
 # Tokenize và xây dựng từ điển
 tokenized_texts = [word_tokenize(t.lower()) for t in texts]
 all_words = [w for txt in tokenized_texts for w in txt]
-most_common = Counter(all_words).most_common(4998)
+most_common = Counter(all_words).most_common(10000)  # Tăng số lượng từ phổ biến lên 10,000
 
 vocab = {'<PAD>': 0, '<UNK>': 1}
 for i, (w, _) in enumerate(most_common, 2):
@@ -54,6 +52,6 @@ train_texts, test_texts, train_labels, test_labels = train_test_split(
 train_dataset = SentimentDataset(train_texts, train_labels)
 test_dataset = SentimentDataset(test_texts, test_labels)
 
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)  # Giảm batch size xuống 16
+test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
 vocab_size = len(vocab)
