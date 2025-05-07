@@ -56,3 +56,4 @@ test_dataset = SentimentDataset(test_texts, test_labels)
 
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+vocab_size = len(vocab)

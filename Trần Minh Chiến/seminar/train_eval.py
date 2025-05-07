@@ -6,7 +6,7 @@ import torch.optim as optim
 from sklearn.metrics import accuracy_score, f1_score
 import json
 
-def train_and_evaluate(model, train_loader, test_loader, epochs=10, lr=0.01):
+def train_and_evaluate(model, train_loader, test_loader, epochs=30, lr=0.01):  # Tăng epochs lên 30
     # Khởi tạo loss function và optimizer SGD (không dùng Adam)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=lr)
@@ -37,21 +37,21 @@ def train_and_evaluate(model, train_loader, test_loader, epochs=10, lr=0.01):
     f1 = f1_score(all_labels, all_preds, average='macro')
     return acc, f1
 
-# Thử nghiệm Pretrained vs Scratch
+# Thử nghiệm với RNN_Pretrained=True
 results = {}
 
-for pretrained in [True, False]:
-    model = RNNModel(
-        vocab_size=len(vocab),
-        embedding_dim=100,
-        hidden_dim=128,
-        output_dim=3,
-        pretrained=pretrained
-    )
-    key = f"RNN_Pretrained={pretrained}"
-    acc, f1 = train_and_evaluate(model, train_loader, test_loader)
-    results[key] = {"Accuracy": acc, "F1-score": f1}
-    print(f"{key} - Accuracy: {acc}, F1-score: {f1}")
+pretrained = True  # Sử dụng pretrained
+model = RNNModel(
+    vocab_size=len(vocab),
+    embedding_dim=100,
+    hidden_dim=128,
+    output_dim=3,
+    pretrained=pretrained
+)
+key = f"RNN_Pretrained={pretrained}"
+acc, f1 = train_and_evaluate(model, train_loader, test_loader)
+results[key] = {"Accuracy": acc, "F1-score": f1}
+print(f"{key} - Accuracy: {acc}, F1-score: {f1}")
 
 # Ghi kết quả ra file
 with open("results.json", "w") as f:
