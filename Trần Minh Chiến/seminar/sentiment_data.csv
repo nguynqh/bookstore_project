@@ -1,0 +1,501 @@
+Index,text,label
+1,Tôi đang học bài.,Neutral
+2,Tôi đang học bài.,Neutral
+3,Trời đang mưa nhẹ.,Neutral
+4,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+5,Hôm nay là thứ Tư.,Neutral
+6,Tôi đang đọc một cuốn sách.,Neutral
+7,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+8,Tôi đang đọc một cuốn sách.,Neutral
+9,Hôm nay là thứ Tư.,Neutral
+10,Tôi đang nghe nhạc.,Neutral
+11,Tôi cảm thấy rất mệt mỏi.,Negative
+12,Tôi bị đau đầu suốt cả ngày.,Negative
+13,Tôi đang nghe nhạc.,Neutral
+14,Bữa ăn hôm nay thật ngon.,Positive
+15,Trời mưa khiến tôi không thể ra ngoài.,Negative
+16,Tôi đang nghe nhạc.,Neutral
+17,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+18,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+19,Tôi vừa hoàn thành dự án!,Positive
+20,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+21,Tôi được thăng chức.,Positive
+22,Tôi đang học bài.,Neutral
+23,Tôi ăn trưa lúc 12 giờ.,Neutral
+24,Tôi cảm thấy rất mệt mỏi.,Negative
+25,Tôi được thăng chức.,Positive
+26,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+27,Tôi bị điểm kém trong bài kiểm tra.,Negative
+28,Tôi ăn trưa lúc 12 giờ.,Neutral
+29,Trời hôm nay thật đẹp.,Positive
+30,Trời đang mưa nhẹ.,Neutral
+31,Tôi đang uống cà phê.,Neutral
+32,Chiếc xe của tôi bị hỏng.,Negative
+33,Tôi cảm thấy rất mệt mỏi.,Negative
+34,Trời mưa khiến tôi không thể ra ngoài.,Negative
+35,Tôi làm mất ví.,Negative
+36,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+37,Công việc hôm nay thật căng thẳng.,Negative
+38,Tôi bị đau đầu suốt cả ngày.,Negative
+39,Tôi bị đau đầu suốt cả ngày.,Negative
+40,Tôi ăn trưa lúc 12 giờ.,Neutral
+41,Hôm nay tôi đi làm muộn.,Negative
+42,Tôi thấy rất thất vọng về bản thân.,Negative
+43,Tôi vừa nhận được lời khen từ sếp.,Positive
+44,Tôi đang đọc một cuốn sách.,Neutral
+45,Tôi ăn trưa lúc 12 giờ.,Neutral
+46,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+47,Trời hôm nay thật đẹp.,Positive
+48,Tôi đang chờ xe buýt.,Neutral
+49,Tôi thấy rất thất vọng về bản thân.,Negative
+50,Hôm nay là thứ Tư.,Neutral
+51,Tôi cảm thấy rất mệt mỏi.,Negative
+52,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+53,Tôi cảm thấy rất hạnh phúc.,Positive
+54,Tôi thấy rất thất vọng về bản thân.,Negative
+55,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+56,Tôi cảm thấy rất hạnh phúc.,Positive
+57,Tôi đang đọc một cuốn sách.,Neutral
+58,Công việc hôm nay thật căng thẳng.,Negative
+59,Công việc hôm nay thật căng thẳng.,Negative
+60,Hôm nay là thứ Tư.,Neutral
+61,Bữa ăn hôm nay thật ngon.,Positive
+62,Tôi bị điểm kém trong bài kiểm tra.,Negative
+63,Tôi cảm thấy rất hạnh phúc.,Positive
+64,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+65,Bữa ăn hôm nay thật ngon.,Positive
+66,Tôi đang đọc một cuốn sách.,Neutral
+67,Tôi làm mất ví.,Negative
+68,Trời đang mưa nhẹ.,Neutral
+69,Chiếc xe của tôi bị hỏng.,Negative
+70,Chiếc xe của tôi bị hỏng.,Negative
+71,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+72,Hôm nay là một ngày tuyệt vời.,Positive
+73,Tôi được thăng chức.,Positive
+74,Trời hôm nay thật đẹp.,Positive
+75,Bữa ăn hôm nay thật ngon.,Positive
+76,Trời đang mưa nhẹ.,Neutral
+77,Hôm nay là thứ Tư.,Neutral
+78,Trời mưa khiến tôi không thể ra ngoài.,Negative
+79,Tôi làm mất ví.,Negative
+80,Tôi đang nghe nhạc.,Neutral
+81,Trời mưa khiến tôi không thể ra ngoài.,Negative
+82,Tôi đang uống cà phê.,Neutral
+83,Chiếc xe của tôi bị hỏng.,Negative
+84,Bữa ăn hôm nay thật ngon.,Positive
+85,Hôm nay tôi đi làm muộn.,Negative
+86,Công việc hôm nay thật căng thẳng.,Negative
+87,Công việc hôm nay thật căng thẳng.,Negative
+88,Chiếc xe của tôi bị hỏng.,Negative
+89,Công việc hôm nay thật căng thẳng.,Negative
+90,Tôi đang chờ xe buýt.,Neutral
+91,Tôi bị điểm kém trong bài kiểm tra.,Negative
+92,Tôi làm mất ví.,Negative
+93,Hôm nay là thứ Tư.,Neutral
+94,Tôi cãi nhau với bạn thân.,Negative
+95,Tôi cãi nhau với bạn thân.,Negative
+96,Hôm nay là một ngày tuyệt vời.,Positive
+97,Tôi được thăng chức.,Positive
+98,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+99,Cuối tuần này tôi sẽ đi du lịch.,Positive
+100,Công việc hôm nay thật căng thẳng.,Negative
+101,Hôm nay tôi đi làm muộn.,Negative
+102,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+103,Tôi ăn trưa lúc 12 giờ.,Neutral
+104,Trời mưa khiến tôi không thể ra ngoài.,Negative
+105,Tôi bị điểm kém trong bài kiểm tra.,Negative
+106,Tôi bị điểm kém trong bài kiểm tra.,Negative
+107,Tôi đang đọc một cuốn sách.,Neutral
+108,Tôi đang nghe nhạc.,Neutral
+109,Tôi đang uống cà phê.,Neutral
+110,Trời hôm nay thật đẹp.,Positive
+111,Công việc hôm nay thật căng thẳng.,Negative
+112,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+113,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+114,Tôi vừa hoàn thành dự án!,Positive
+115,Hôm nay là một ngày tuyệt vời.,Positive
+116,Công việc hôm nay thật căng thẳng.,Negative
+117,Hôm nay là một ngày tuyệt vời.,Positive
+118,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+119,Tôi cảm thấy rất hạnh phúc.,Positive
+120,Tôi ăn trưa lúc 12 giờ.,Neutral
+121,Tôi được thăng chức.,Positive
+122,Tôi được thăng chức.,Positive
+123,Tôi làm mất ví.,Negative
+124,Trời đang mưa nhẹ.,Neutral
+125,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+126,Cuối tuần này tôi sẽ đi du lịch.,Positive
+127,Tôi cảm thấy rất hạnh phúc.,Positive
+128,Tôi làm mất ví.,Negative
+129,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+130,Tôi cảm thấy rất mệt mỏi.,Negative
+131,Tôi cảm thấy rất hạnh phúc.,Positive
+132,Công việc hôm nay thật căng thẳng.,Negative
+133,Tôi đang học bài.,Neutral
+134,Công việc hôm nay thật căng thẳng.,Negative
+135,Trời mưa khiến tôi không thể ra ngoài.,Negative
+136,Hôm nay là một ngày tuyệt vời.,Positive
+137,Công việc hôm nay thật căng thẳng.,Negative
+138,Công việc hôm nay thật căng thẳng.,Negative
+139,Chiếc xe của tôi bị hỏng.,Negative
+140,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+141,Tôi đang học bài.,Neutral
+142,Trời hôm nay thật đẹp.,Positive
+143,Tôi đang uống cà phê.,Neutral
+144,Tôi đang đọc một cuốn sách.,Neutral
+145,Hôm nay là thứ Tư.,Neutral
+146,Tôi đang chờ xe buýt.,Neutral
+147,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+148,Tôi bị đau đầu suốt cả ngày.,Negative
+149,Tôi ăn trưa lúc 12 giờ.,Neutral
+150,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+151,Hôm nay là một ngày tuyệt vời.,Positive
+152,Hôm nay là thứ Tư.,Neutral
+153,Tôi bị điểm kém trong bài kiểm tra.,Negative
+154,Tôi ăn trưa lúc 12 giờ.,Neutral
+155,Tôi đang nghe nhạc.,Neutral
+156,Tôi được thăng chức.,Positive
+157,Tôi cảm thấy rất mệt mỏi.,Negative
+158,Chiếc xe của tôi bị hỏng.,Negative
+159,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+160,Tôi đang uống cà phê.,Neutral
+161,Tôi đang nghe nhạc.,Neutral
+162,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+163,Tôi được thăng chức.,Positive
+164,Trời đang mưa nhẹ.,Neutral
+165,Tôi bị đau đầu suốt cả ngày.,Negative
+166,Tôi cãi nhau với bạn thân.,Negative
+167,Tôi làm mất ví.,Negative
+168,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+169,Tôi đang chờ xe buýt.,Neutral
+170,Tôi ăn trưa lúc 12 giờ.,Neutral
+171,Trời hôm nay thật đẹp.,Positive
+172,Tôi đang chờ xe buýt.,Neutral
+173,Hôm nay là thứ Tư.,Neutral
+174,Tôi đang học bài.,Neutral
+175,Tôi đang đọc một cuốn sách.,Neutral
+176,Hôm nay là thứ Tư.,Neutral
+177,Công việc hôm nay thật căng thẳng.,Negative
+178,Tôi vừa hoàn thành dự án!,Positive
+179,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+180,Trời đang mưa nhẹ.,Neutral
+181,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+182,Trời mưa khiến tôi không thể ra ngoài.,Negative
+183,Trời hôm nay thật đẹp.,Positive
+184,Tôi cảm thấy rất mệt mỏi.,Negative
+185,Tôi đang đọc một cuốn sách.,Neutral
+186,Hôm nay là thứ Tư.,Neutral
+187,Tôi làm mất ví.,Negative
+188,Hôm nay tôi đi làm muộn.,Negative
+189,Tôi bị điểm kém trong bài kiểm tra.,Negative
+190,Tôi đang uống cà phê.,Neutral
+191,Tôi vừa nhận được lời khen từ sếp.,Positive
+192,Tôi đang học bài.,Neutral
+193,Tôi cảm thấy rất hạnh phúc.,Positive
+194,Trời hôm nay thật đẹp.,Positive
+195,Hôm nay tôi đi làm muộn.,Negative
+196,Tôi đang học bài.,Neutral
+197,Tôi cảm thấy rất mệt mỏi.,Negative
+198,Tôi vừa nhận được lời khen từ sếp.,Positive
+199,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+200,Tôi được thăng chức.,Positive
+201,Hôm nay là thứ Tư.,Neutral
+202,Tôi làm mất ví.,Negative
+203,Tôi thấy rất thất vọng về bản thân.,Negative
+204,Trời mưa khiến tôi không thể ra ngoài.,Negative
+205,Tôi làm mất ví.,Negative
+206,Trời đang mưa nhẹ.,Neutral
+207,Tôi đang đọc một cuốn sách.,Neutral
+208,Trời hôm nay thật đẹp.,Positive
+209,Tôi đang nghe nhạc.,Neutral
+210,Hôm nay tôi đi làm muộn.,Negative
+211,Tôi ăn trưa lúc 12 giờ.,Neutral
+212,Hôm nay là thứ Tư.,Neutral
+213,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+214,Công việc hôm nay thật căng thẳng.,Negative
+215,Tôi đang học bài.,Neutral
+216,Tôi đang đọc một cuốn sách.,Neutral
+217,Tôi vừa hoàn thành dự án!,Positive
+218,Tôi đang đọc một cuốn sách.,Neutral
+219,Tôi cảm thấy rất hạnh phúc.,Positive
+220,Tôi cảm thấy rất mệt mỏi.,Negative
+221,Tôi bị điểm kém trong bài kiểm tra.,Negative
+222,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+223,Cuối tuần này tôi sẽ đi du lịch.,Positive
+224,Trời đang mưa nhẹ.,Neutral
+225,Hôm nay tôi đi làm muộn.,Negative
+226,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+227,Tôi cãi nhau với bạn thân.,Negative
+228,Tôi ăn trưa lúc 12 giờ.,Neutral
+229,Chiếc xe của tôi bị hỏng.,Negative
+230,Hôm nay là một ngày tuyệt vời.,Positive
+231,Tôi cãi nhau với bạn thân.,Negative
+232,Tôi thấy rất thất vọng về bản thân.,Negative
+233,Tôi cảm thấy rất mệt mỏi.,Negative
+234,Trời đang mưa nhẹ.,Neutral
+235,Tôi được thăng chức.,Positive
+236,Tôi làm mất ví.,Negative
+237,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+238,Tôi đang chờ xe buýt.,Neutral
+239,Hôm nay là thứ Tư.,Neutral
+240,Tôi đang đọc một cuốn sách.,Neutral
+241,Tôi bị điểm kém trong bài kiểm tra.,Negative
+242,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+243,Trời đang mưa nhẹ.,Neutral
+244,Cuối tuần này tôi sẽ đi du lịch.,Positive
+245,Bữa ăn hôm nay thật ngon.,Positive
+246,Bữa ăn hôm nay thật ngon.,Positive
+247,Tôi cãi nhau với bạn thân.,Negative
+248,Chiếc xe của tôi bị hỏng.,Negative
+249,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+250,Chiếc xe của tôi bị hỏng.,Negative
+251,Chiếc xe của tôi bị hỏng.,Negative
+252,Tôi đang đọc một cuốn sách.,Neutral
+253,Tôi đang nghe nhạc.,Neutral
+254,Hôm nay tôi đi làm muộn.,Negative
+255,Trời mưa khiến tôi không thể ra ngoài.,Negative
+256,Tôi bị đau đầu suốt cả ngày.,Negative
+257,Tôi vừa hoàn thành dự án!,Positive
+258,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+259,Cuối tuần này tôi sẽ đi du lịch.,Positive
+260,Tôi làm mất ví.,Negative
+261,Tôi đang nghe nhạc.,Neutral
+262,Hôm nay là một ngày tuyệt vời.,Positive
+263,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+264,Tôi thấy rất thất vọng về bản thân.,Negative
+265,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+266,Tôi được thăng chức.,Positive
+267,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+268,Tôi làm mất ví.,Negative
+269,Tôi cãi nhau với bạn thân.,Negative
+270,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+271,Tôi đang học bài.,Neutral
+272,Tôi vừa nhận được lời khen từ sếp.,Positive
+273,Tôi vừa hoàn thành dự án!,Positive
+274,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+275,Tôi làm mất ví.,Negative
+276,Chiếc xe của tôi bị hỏng.,Negative
+277,Tôi ăn trưa lúc 12 giờ.,Neutral
+278,Tôi được thăng chức.,Positive
+279,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+280,Tôi làm mất ví.,Negative
+281,Hôm nay là một ngày tuyệt vời.,Positive
+282,Hôm nay tôi đi làm muộn.,Negative
+283,Tôi bị điểm kém trong bài kiểm tra.,Negative
+284,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+285,Trời mưa khiến tôi không thể ra ngoài.,Negative
+286,Tôi làm mất ví.,Negative
+287,Tôi đang uống cà phê.,Neutral
+288,Hôm nay là thứ Tư.,Neutral
+289,Tôi đang chờ xe buýt.,Neutral
+290,Tôi cảm thấy rất hạnh phúc.,Positive
+291,Tôi thấy rất thất vọng về bản thân.,Negative
+292,Tôi thấy rất thất vọng về bản thân.,Negative
+293,Tôi bị đau đầu suốt cả ngày.,Negative
+294,Chiếc xe của tôi bị hỏng.,Negative
+295,Công việc hôm nay thật căng thẳng.,Negative
+296,Tôi cảm thấy rất mệt mỏi.,Negative
+297,Tôi thấy rất thất vọng về bản thân.,Negative
+298,Tôi được thăng chức.,Positive
+299,Trời hôm nay thật đẹp.,Positive
+300,Trời mưa khiến tôi không thể ra ngoài.,Negative
+301,Hôm nay là một ngày tuyệt vời.,Positive
+302,Công việc hôm nay thật căng thẳng.,Negative
+303,Tôi đang uống cà phê.,Neutral
+304,Tôi bị điểm kém trong bài kiểm tra.,Negative
+305,Tôi được thăng chức.,Positive
+306,Trời hôm nay thật đẹp.,Positive
+307,Bữa ăn hôm nay thật ngon.,Positive
+308,Trời đang mưa nhẹ.,Neutral
+309,Tôi vừa nhận được lời khen từ sếp.,Positive
+310,Hôm nay tôi đi làm muộn.,Negative
+311,Tôi đang học bài.,Neutral
+312,Tôi vừa nhận được lời khen từ sếp.,Positive
+313,Tôi bị đau đầu suốt cả ngày.,Negative
+314,Tôi vừa nhận được lời khen từ sếp.,Positive
+315,Tôi vừa hoàn thành dự án!,Positive
+316,Tôi được thăng chức.,Positive
+317,Tôi đang đọc một cuốn sách.,Neutral
+318,Tôi bị đau đầu suốt cả ngày.,Negative
+319,Bữa ăn hôm nay thật ngon.,Positive
+320,Chiếc xe của tôi bị hỏng.,Negative
+321,Tôi làm mất ví.,Negative
+322,Tôi đang chờ xe buýt.,Neutral
+323,Tôi cảm thấy rất hạnh phúc.,Positive
+324,Tôi đang học bài.,Neutral
+325,Tôi thấy rất thất vọng về bản thân.,Negative
+326,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+327,Trời đang mưa nhẹ.,Neutral
+328,Tôi cãi nhau với bạn thân.,Negative
+329,Tôi được thăng chức.,Positive
+330,Tôi làm mất ví.,Negative
+331,Tôi bị đau đầu suốt cả ngày.,Negative
+332,Tôi thấy rất thất vọng về bản thân.,Negative
+333,Chiếc xe của tôi bị hỏng.,Negative
+334,Trời mưa khiến tôi không thể ra ngoài.,Negative
+335,Bữa ăn hôm nay thật ngon.,Positive
+336,Tôi cãi nhau với bạn thân.,Negative
+337,Trời đang mưa nhẹ.,Neutral
+338,Trời mưa khiến tôi không thể ra ngoài.,Negative
+339,Tôi làm mất ví.,Negative
+340,Tôi đang đọc một cuốn sách.,Neutral
+341,Tôi đang nghe nhạc.,Neutral
+342,Tôi vừa nhận được lời khen từ sếp.,Positive
+343,Tôi đang đọc một cuốn sách.,Neutral
+344,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+345,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+346,Tôi được thăng chức.,Positive
+347,Công việc hôm nay thật căng thẳng.,Negative
+348,Tôi đang đọc một cuốn sách.,Neutral
+349,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+350,Tôi đang đọc một cuốn sách.,Neutral
+351,Tôi đang nghe nhạc.,Neutral
+352,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+353,Tôi đang chờ xe buýt.,Neutral
+354,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+355,Bữa ăn hôm nay thật ngon.,Positive
+356,Tôi vừa nhận được lời khen từ sếp.,Positive
+357,Tôi đang đọc một cuốn sách.,Neutral
+358,Tôi thấy rất thất vọng về bản thân.,Negative
+359,Tôi đang nghe nhạc.,Neutral
+360,Tôi thấy rất thất vọng về bản thân.,Negative
+361,Trời đang mưa nhẹ.,Neutral
+362,Trời đang mưa nhẹ.,Neutral
+363,Tôi đang nghe nhạc.,Neutral
+364,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+365,Tôi đang nghe nhạc.,Neutral
+366,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+367,Tôi cảm thấy rất mệt mỏi.,Negative
+368,Tôi đang học bài.,Neutral
+369,Tôi vừa nhận được lời khen từ sếp.,Positive
+370,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+371,Tôi vừa nhận được lời khen từ sếp.,Positive
+372,Tôi vừa nhận được lời khen từ sếp.,Positive
+373,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+374,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+375,Tôi cảm thấy rất mệt mỏi.,Negative
+376,Tôi được thăng chức.,Positive
+377,Bữa ăn hôm nay thật ngon.,Positive
+378,Tôi vừa nhận được lời khen từ sếp.,Positive
+379,Tôi thấy rất thất vọng về bản thân.,Negative
+380,Tôi bị đau đầu suốt cả ngày.,Negative
+381,Tôi vừa hoàn thành dự án!,Positive
+382,Trời hôm nay thật đẹp.,Positive
+383,Tôi cảm thấy rất hạnh phúc.,Positive
+384,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+385,Tôi bị đau đầu suốt cả ngày.,Negative
+386,Hôm nay là thứ Tư.,Neutral
+387,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+388,Trời đang mưa nhẹ.,Neutral
+389,Tôi được thăng chức.,Positive
+390,Tôi đang uống cà phê.,Neutral
+391,Không có gì đặc biệt xảy ra hôm nay.,Neutral
+392,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+393,Trời hôm nay thật đẹp.,Positive
+394,Tôi ăn trưa lúc 12 giờ.,Neutral
+395,Hôm nay là thứ Tư.,Neutral
+396,Tôi đạt điểm cao trong bài kiểm tra.,Positive
+397,Tôi vừa nhận được lời khen từ sếp.,Positive
+398,Công việc hôm nay thật căng thẳng.,Negative
+399,Tôi bị đau đầu suốt cả ngày.,Negative
+400,Tôi cãi nhau với bạn thân.,Negative
+401,Tôi cảm thấy rất hạnh phúc.,Positive
+402,Tôi vừa hoàn thành dự án!,Positive
+403,Trời đang mưa nhẹ.,Neutral
+404,Trời hôm nay thật đẹp.,Positive
+405,Tôi vừa hoàn thành dự án!,Positive
+406,Tôi đang học bài.,Neutral
+407,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+408,Hôm nay tôi đi làm muộn.,Negative
+409,Tôi làm mất ví.,Negative
+410,Tôi bị điểm kém trong bài kiểm tra.,Negative
+411,Tôi đang uống cà phê.,Neutral
+412,Trời mưa khiến tôi không thể ra ngoài.,Negative
+413,Chiếc xe của tôi bị hỏng.,Negative
+414,Tôi ăn trưa lúc 12 giờ.,Neutral
+415,Cuối tuần này tôi sẽ đi du lịch.,Positive
+416,Tôi cảm thấy rất hạnh phúc.,Positive
+417,Tôi vừa nhận được lời khen từ sếp.,Positive
+418,Trời mưa khiến tôi không thể ra ngoài.,Negative
+419,Cuối tuần này tôi sẽ đi du lịch.,Positive
+420,Tôi thấy rất thất vọng về bản thân.,Negative
+421,Cuối tuần này tôi sẽ đi du lịch.,Positive
+422,Trời hôm nay thật đẹp.,Positive
+423,Tôi thấy rất thất vọng về bản thân.,Negative
+424,Tôi vừa nhận được lời khen từ sếp.,Positive
+425,Tôi đang đọc một cuốn sách.,Neutral
+426,Tôi bị đau đầu suốt cả ngày.,Negative
+427,Tôi cãi nhau với bạn thân.,Negative
+428,Tôi bị đau đầu suốt cả ngày.,Negative
+429,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+430,Tôi đang học bài.,Neutral
+431,Hôm nay là một ngày tuyệt vời.,Positive
+432,Tôi vừa nhận được lời khen từ sếp.,Positive
+433,Tôi đang đọc một cuốn sách.,Neutral
+434,Tôi đi bộ 15 phút mỗi sáng.,Neutral
+435,Tôi cảm thấy rất mệt mỏi.,Negative
+436,Cuối tuần này tôi sẽ đi du lịch.,Positive
+437,Tôi đang đọc một cuốn sách.,Neutral
+438,Tôi cảm thấy rất mệt mỏi.,Negative
+439,Tôi đang chờ xe buýt.,Neutral
+440,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+441,Hôm nay là thứ Tư.,Neutral
+442,Trời mưa khiến tôi không thể ra ngoài.,Negative
+443,Tôi bị điểm kém trong bài kiểm tra.,Negative
+444,Tôi bị đau đầu suốt cả ngày.,Negative
+445,Tôi bị điểm kém trong bài kiểm tra.,Negative
+446,Tôi bị đau đầu suốt cả ngày.,Negative
+447,Hôm nay là một ngày tuyệt vời.,Positive
+448,Tôi cảm thấy rất mệt mỏi.,Negative
+449,Hôm nay tôi đi làm muộn.,Negative
+450,Trời hôm nay thật đẹp.,Positive
+451,Công việc hôm nay thật căng thẳng.,Negative
+452,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+453,Tôi vừa nhận được lời khen từ sếp.,Positive
+454,Tôi cãi nhau với bạn thân.,Negative
+455,Tôi được thăng chức.,Positive
+456,Hôm nay tôi đi làm muộn.,Negative
+457,Tôi đang đọc một cuốn sách.,Neutral
+458,Hôm nay tôi đi làm muộn.,Negative
+459,Tôi cảm thấy rất hạnh phúc.,Positive
+460,Trời hôm nay thật đẹp.,Positive
+461,Tôi vừa nhận được lời khen từ sếp.,Positive
+462,Tôi thấy rất thất vọng về bản thân.,Negative
+463,Tôi cãi nhau với bạn thân.,Negative
+464,Tôi cảm thấy rất hạnh phúc.,Positive
+465,Tôi thấy rất thất vọng về bản thân.,Negative
+466,Tôi thấy rất thất vọng về bản thân.,Negative
+467,Hôm nay tôi đi làm muộn.,Negative
+468,Hôm nay tôi đi làm muộn.,Negative
+469,Tôi được thăng chức.,Positive
+470,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+471,Tôi ăn trưa lúc 12 giờ.,Neutral
+472,Tôi bị điểm kém trong bài kiểm tra.,Negative
+473,Cuối tuần này tôi sẽ đi du lịch.,Positive
+474,Tôi cảm thấy rất mệt mỏi.,Negative
+475,Tôi ăn trưa lúc 12 giờ.,Neutral
+476,Tôi ăn trưa lúc 12 giờ.,Neutral
+477,Tôi cảm thấy rất hạnh phúc.,Positive
+478,Bữa ăn hôm nay thật ngon.,Positive
+479,Bữa ăn hôm nay thật ngon.,Positive
+480,Trời mưa khiến tôi không thể ra ngoài.,Negative
+481,Trời mưa khiến tôi không thể ra ngoài.,Negative
+482,Tôi làm mất ví.,Negative
+483,Tôi cãi nhau với bạn thân.,Negative
+484,Trời hôm nay thật đẹp.,Positive
+485,Trời mưa khiến tôi không thể ra ngoài.,Negative
+486,Tôi vừa nhận được lời khen từ sếp.,Positive
+487,Tôi ăn trưa lúc 12 giờ.,Neutral
+488,Tôi thấy rất thất vọng về bản thân.,Negative
+489,Tôi được thăng chức.,Positive
+490,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+491,Tôi cãi nhau với bạn thân.,Negative
+492,Tôi vừa nhận được lời khen từ sếp.,Positive
+493,Tôi có thời gian nghỉ ngơi và thư giãn.,Positive
+494,Trời đang mưa nhẹ.,Neutral
+495,Trời mưa khiến tôi không thể ra ngoài.,Negative
+496,Tôi cãi nhau với bạn thân.,Negative
+497,Chiếc xe của tôi bị hỏng.,Negative
+498,Công việc hôm nay thật căng thẳng.,Negative
+499,Tôi được thăng chức.,Positive
+500,Tôi đi bộ 15 phút mỗi sáng.,Neutral
