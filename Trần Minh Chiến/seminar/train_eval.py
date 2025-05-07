@@ -6,7 +6,12 @@ import torch.optim as optim
 from sklearn.metrics import accuracy_score, f1_score
 from tqdm import tqdm
 import json
+from nltk.tokenize import word_tokenize
+from data import clean_text, to_indices, max_len_text
 
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# ====================
 def evaluate(model, loader, device):
     model.eval()
     all_preds, all_labels = [], []
@@ -20,6 +25,20 @@ def evaluate(model, loader, device):
     acc = accuracy_score(all_labels, all_preds)
     f1 = f1_score(all_labels, all_preds, average='macro')
     return acc, f1
+def predict_sentence(model, sentence, vocab, device):
+    model.eval()
+    with torch.no_grad():
+        cleaned = clean_text(sentence)
+        tokens = word_tokenize(cleaned)
+        indices = to_indices(tokens, vocab, max_len_text)
+        input_tensor = torch.tensor(indices).unsqueeze(0).to(device)
+
+        output = model(input_tensor)
+        pred_label = torch.argmax(output, dim=1).item()
+
+        label_map = {0: 'Positive', 1: 'Negative', 2: 'Neutral'}
+        return label_map[pred_label]
+
 
 def train_and_evaluate(model, train_loader, test_loader, epochs=10, lr=0.001):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -45,12 +64,8 @@ def train_and_evaluate(model, train_loader, test_loader, epochs=10, lr=0.001):
         test_acc, test_f1 = evaluate(model, test_loader, device)
 
         print(f"Epoch {epoch+1} - Loss: {avg_loss:.4f}, Train Acc: {train_acc:.3f}, Test Acc: {test_acc:.3f}, F1: {test_f1:.3f}")
- # Lưu mô hình sau mỗi epoch
-        model_path = r'D:\bookstore_project\Trần Minh Chiến\seminar\model\RNN_epoch_{}.pth'.format(epoch+1)
-        torch.save(model.state_dict(), model_path)
-        print(f'Model saved to {model_path}')
-    return test_acc, test_f1
 
+    return test_acc, test_f1
 
 # Thử nghiệm Pretrained vs Scratch
 results = {}
@@ -61,8 +76,8 @@ for pretrained in [True, False]:
     embedding_dim=100,
     hidden_dim=128,
     output_dim=3,
-    vocab_dict=vocab,         
-    pretrained=True            
+    vocab_dict=vocab,          # thêm dòng này
+    pretrained=True            # hoặc False để so sánh
 )
     key = f"RNN_Pretrained={pretrained}"
     acc, f1 = train_and_evaluate(model, train_loader, test_loader)
@@ -72,3 +87,12 @@ for pretrained in [True, False]:
 # Ghi kết quả ra file
 with open("results.json", "w") as f:
     json.dump(results, f, indent=4)
+test_sentences = [
+    "Buổi hòa nhạc thật tuyệt, tôi rất thích.",
+    "Dịch vụ này thật tệ, tôi rất thất vọng.",
+    "Tôi đang đi học."
+]
+
+for sentence in test_sentences:
+    predicted = predict_sentence(model, sentence, vocab, device)
+    print(f"Câu: '{sentence}' --> Dự đoán cảm xúc: {predicted}")
