@@ -2,25 +2,19 @@ import torch
 import torch.nn as nn
 import torchtext.vocab as torchvocab
 
-
 class RNNModel(nn.Module):
-    def __init__(self, vocab_size, embedding_dim, hidden_dim, output_dim, vocab_dict=None, pretrained=False):
+    def __init__(self, vocab_size, embedding_dim, hidden_dim, output_dim, vocab_dict=None, pretrained=False, embedding_matrix=None):
         super().__init__()
 
+        # Use pretrained embeddings (e.g., fastText or GloVe for Vietnamese)
         if pretrained:
-            print("Loading GloVe embeddings...")
-            glove = torchvocab.GloVe(name='6B', dim=embedding_dim)
-            embedding_weights = torch.zeros(vocab_size, embedding_dim)
-            for word, idx in vocab_dict.items():
-                if word in glove.stoi:
-                    embedding_weights[idx] = glove[word]
-                else:
-                    embedding_weights[idx] = torch.randn(embedding_dim) * 0.05
-            self.embedding = nn.Embedding.from_pretrained(embedding_weights, freeze=False, padding_idx=0)
+            print("Loading Pretrained Embeddings...")
+            # Example: Using a pretrained embedding matrix (fastText or similar)
+            self.embedding = nn.Embedding.from_pretrained(embedding_matrix, freeze=False, padding_idx=0)
         else:
             self.embedding = nn.Embedding(vocab_size, embedding_dim, padding_idx=0)
 
-        # Bidirectional LSTM + Dropout
+        # Bi-directional LSTM + Dropout
         self.lstm = nn.LSTM(
             input_size=embedding_dim,
             hidden_size=hidden_dim,
