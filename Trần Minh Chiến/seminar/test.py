@@ -22,13 +22,7 @@ test_sentences = [
     "Hôm nay tôi nhận được tin vui từ công việc. Những nỗ lực suốt thời gian qua cuối cùng cũng được đền đáp. Đồng nghiệp chúc mừng, cấp trên ghi nhận. Tôi cảm thấy tràn đầy năng lượng và tự tin hơn vào con đường mình đã chọn.",
     "Tôi thức dậy vào lúc 6 giờ sáng, pha một tách cà phê và đọc vài trang sách trước khi bắt đầu công việc. Ngày hôm nay trôi qua như mọi ngày khác, không có gì đặc biệt xảy ra, nhưng cũng không có điều gì khiến tôi bận tâm.",
     "Trời mưa suốt cả ngày khiến tôi không thể ra ngoài. Kế hoạch bị hoãn lại, mọi việc trở nên bế tắc. Tôi cảm thấy bực bội và mất kiên nhẫn khi mọi thứ không đi theo đúng dự định đã đặt ra từ trước."
-    "Buổi trưa, tôi ghé quán ăn quen thuộc, gọi một phần cơm sườn. Quán vẫn đông như mọi khi. Tôi ăn xong rồi trở về làm việc. Không có gì đặc biệt xảy ra trong suốt buổi chiều, chỉ là một ngày bình thường.",
-    "Tôi vừa hoàn thành một dự án quan trọng trước thời hạn. Cảm giác nhẹ nhõm và vui sướng khiến tôi muốn tự thưởng cho bản thân một bữa tối thịnh soạn. Tôi tin rằng sự chăm chỉ luôn mang lại kết quả tốt đẹp.",
-    "Cuộc họp sáng nay kéo dài và đầy căng thẳng. Tôi bị chỉ trích vì lỗi không hoàn toàn do mình. Cảm giác ức chế và mệt mỏi cứ đeo bám cả ngày, khiến tôi không thể tập trung vào công việc còn lại.",
-    "Hôm nay là thứ tư, tôi đi làm như thường lệ. Giao thông khá ổn, công việc không có gì quá tải. Tôi ăn trưa với đồng nghiệp và trở về bàn làm việc. Ngày trôi qua nhẹ nhàng mà không có biến động gì đáng kể.",
-    "Sau buổi tập thể dục buổi chiều, tôi thấy cơ thể khỏe mạnh và tinh thần thoải mái hơn hẳn. Không gì bằng việc duy trì thói quen lành mạnh mỗi ngày. Tôi hào hứng với những kế hoạch sắp tới cho bản thân.",
-    "Tôi cảm thấy thất vọng khi người bạn thân không giữ lời hứa. Dù đã chờ đợi rất lâu, cuối cùng chỉ nhận lại sự im lặng. Điều đó khiến tôi nghi ngờ tình bạn mà trước đây từng rất trân trọng và tin tưởng.",
-    "Buổi tối, tôi ngồi xem một bộ phim tài liệu về thiên nhiên. Hình ảnh đẹp và kiến thức thú vị giúp tôi thư giãn đầu óc. Mặc dù không quá ấn tượng, nhưng đó là một trải nghiệm thư giãn nhẹ nhàng trước giờ đi ngủ.",
+    
 ]
 
 # Chạy dự đoán với cả hai mô hình
