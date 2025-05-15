@@ -1,0 +1,18 @@
+bookstore-microservices/
+├── auth-service/
+├── book-service/
+├── customer-service/
+├── inventory-service/
+├── order-service/
+├── payment-service/
+├── search-service/
+├── common-lib/
+├── api-gateway/
+├── docker-compose.yml
+├── docker-compose.dev.yml
+├── docker-compose.infrastructure.yml
+├── k8s/
+│   ├── config/
+│   ├── infrastructure/
+│   └── services/
+└── pom.xml
