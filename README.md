@@ -37,9 +37,6 @@
 ![Trang đăng nhiệp người dùng](assets/screenshots/login.png)
 
 
-### Bảng điều khiển Admin
-
-![Dashboard Admin](assets/screenshots/admin_dashboard.png)
 
 
 
