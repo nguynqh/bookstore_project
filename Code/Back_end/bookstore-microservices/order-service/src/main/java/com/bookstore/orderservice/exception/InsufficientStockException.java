@@ -1,0 +1,4 @@
+package com.bookstore.orderservice.exception;
+
+public class InsufficientStockException {
+}
