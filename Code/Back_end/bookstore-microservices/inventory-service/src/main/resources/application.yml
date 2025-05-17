@@ -1,0 +1,56 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: inventory-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bookstore_inventory_db
+    username: postgres
+    password: quanghieu2512
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: inventory-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.bookstore.*
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
+# Custom properties
+bookstore:
+  book-service:
+    url: http://localhost:8081/api
+  order-service:
+    url: http://localhost:8082/api
+  kafka:
+    topics:
+      order-created: order-created-topic
+      inventory-updated: inventory-updated-topic
+  inventory:
+    threshold: 5  # Minimum stock level before alert
