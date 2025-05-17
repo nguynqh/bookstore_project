@@ -1,0 +1,50 @@
+customer-service/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── customerservice/
+│   │   │               ├── CustomerServiceApplication.java
+│   │   │               ├── controller/
+│   │   │               │   ├── CustomerController.java
+│   │   │               │   └── CustomerActivityController.java
+│   │   │               ├── dto/
+│   │   │               │   ├── CustomerDTO.java
+│   │   │               │   ├── CustomerRequest.java
+│   │   │               │   ├── CustomerActivityDTO.java
+│   │   │               │   └── CustomerActivityRequest.java
+│   │   │               ├── entity/
+│   │   │               │   ├── Customer.java
+│   │   │               │   └── CustomerActivity.java
+│   │   │               ├── exception/
+│   │   │               │   ├── CustomerNotFoundException.java
+│   │   │               │   ├── CustomerAlreadyExistsException.java
+│   │   │               │   └── GlobalExceptionHandler.java
+│   │   │               ├── repository/
+│   │   │               │   ├── CustomerRepository.java
+│   │   │               │   └── CustomerActivityRepository.java
+│   │   │               └── service/
+│   │   │                   ├── CustomerService.java
+│   │   │                   └── CustomerActivityService.java
+│   │   └── resources/
+│   │       ├── application.yml
+│   │       └── banner.txt (tùy chọn)
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── bookstore/
+│                   └── customerservice/
+│                       ├── controller/
+│                       │   ├── CustomerControllerTest.java
+│                       │   └── CustomerActivityControllerTest.java
+│                       ├── service/
+│                       │   ├── CustomerServiceTest.java
+│                       │   └── CustomerActivityServiceTest.java
+│                       └── repository/
+│                           ├── CustomerRepositoryTest.java
+│                           └── CustomerActivityRepositoryTest.java
+├── .gitignore
+├── Dockerfile
+├── pom.xml
+└── README.md

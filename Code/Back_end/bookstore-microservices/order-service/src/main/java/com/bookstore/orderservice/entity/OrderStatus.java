@@ -1,4 +1,11 @@
 package com.bookstore.orderservice.entity;
 
-public class OrderStatus {
+public enum OrderStatus {
+    PENDING,
+    CONFIRMED,
+    PROCESSING,
+    SHIPPED,
+    DELIVERED,
+    CANCELLED,
+    RETURNED
 }
