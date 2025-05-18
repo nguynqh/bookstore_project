@@ -1,0 +1,879 @@
+# BÁO CÁO CUỐI KỲ - DỰ ÁN BOOKSTORE
+
+## Chương 1: Tổng quan đề tài
+
+### 1.1. Giới thiệu
+
+Dự án Bookstore là một hệ thống quản lý nhà sách trực tuyến, cho phép người dùng mua sắm sách, quản lý đơn hàng và theo dõi lịch sử mua hàng. Hệ thống được phát triển với kiến trúc microservices, sử dụng các công nghệ hiện đại để đảm bảo tính mở rộng và bảo trì.
+
+#### 1.1.1. Bối cảnh
+
+Trong thời đại số hóa hiện nay, việc mua sắm trực tuyến đã trở thành xu hướng tất yếu. Đặc biệt là trong lĩnh vực sách, việc chuyển đổi số giúp người dùng dễ dàng tiếp cận với nguồn tri thức phong phú và đa dạng. Tuy nhiên, các hệ thống quản lý nhà sách hiện tại thường gặp phải các vấn đề về:
+
+1. Khả năng mở rộng
+
+   - Hệ thống không thể xử lý lượng người dùng lớn
+   - Khó khăn trong việc thêm tính năng mới
+   - Chi phí nâng cấp cao
+   - Thời gian downtime khi nâng cấp
+
+2. Hiệu suất xử lý
+
+   - Thời gian phản hồi chậm
+   - Tải hệ thống cao
+   - Xử lý đồng thời kém
+   - Tối ưu hóa truy vấn chưa hiệu quả
+
+3. Bảo mật thông tin
+
+   - Rủi ro về rò rỉ dữ liệu
+   - Xác thực và phân quyền chưa chặt chẽ
+   - Mã hóa dữ liệu chưa đầy đủ
+   - Thiếu cơ chế bảo vệ chống tấn công
+
+4. Trải nghiệm người dùng
+
+   - Giao diện chưa thân thiện
+   - Tốc độ tải trang chậm
+   - Thiếu tính năng tìm kiếm thông minh
+   - Không hỗ trợ đa nền tảng
+
+5. Quản lý dữ liệu
+   - Khó khăn trong việc đồng bộ dữ liệu
+   - Sao lưu và khôi phục phức tạp
+   - Thiếu cơ chế kiểm soát phiên bản
+   - Khó khăn trong việc tích hợp dữ liệu
+
+#### 1.1.2. Động lực
+
+1. Nhu cầu thị trường
+
+   - Xu hướng mua sắm trực tuyến tăng mạnh
+   - Nhu cầu về nền tảng mua sách hiện đại
+   - Đòi hỏi về tính tiện lợi và nhanh chóng
+   - Yêu cầu về đa dạng sản phẩm
+
+2. Xu hướng chuyển đổi số
+
+   - Chuyển đổi số trong ngành xuất bản
+   - Ứng dụng công nghệ mới
+   - Tối ưu hóa quy trình
+   - Tăng cường trải nghiệm số
+
+3. Yêu cầu kỹ thuật
+
+   - Tính bảo mật cao
+   - Hiệu suất tốt
+   - Khả năng mở rộng
+   - Dễ dàng bảo trì
+
+4. Trải nghiệm người dùng
+   - Giao diện thân thiện
+   - Tốc độ nhanh
+   - Tính năng phong phú
+   - Hỗ trợ đa nền tảng
+
+### 1.2. Mục tiêu
+
+#### 1.2.1. Mục tiêu chung
+
+1. Xây dựng hệ thống hiện đại
+
+   - Áp dụng kiến trúc microservices
+   - Sử dụng công nghệ mới nhất
+   - Đảm bảo tính mở rộng
+   - Tối ưu hiệu suất
+
+2. Tích hợp công nghệ
+
+   - Spring Boot cho backend
+   - React cho frontend
+   - Docker cho containerization
+   - CI/CD cho deployment
+
+3. Đảm bảo chất lượng
+   - Bảo mật thông tin
+   - Hiệu suất cao
+   - Độ tin cậy tốt
+   - Dễ dàng bảo trì
+
+#### 1.2.2. Mục tiêu cụ thể
+
+1. Phát triển hệ thống
+
+   - Thiết kế kiến trúc microservices
+   - Xây dựng các service riêng biệt
+   - Tích hợp các service
+   - Kiểm thử toàn diện
+
+2. Tích hợp công nghệ
+
+   - Spring Boot và Spring Cloud
+   - React và TypeScript
+   - Docker và Kubernetes
+   - Jenkins và GitLab CI
+
+3. Giao diện người dùng
+
+   - Thiết kế UI/UX hiện đại
+   - Responsive design
+   - Tối ưu hiệu suất
+   - Hỗ trợ đa nền tảng
+
+4. Bảo mật và hiệu suất
+
+   - Xác thực và phân quyền
+   - Mã hóa dữ liệu
+   - Tối ưu truy vấn
+   - Caching và load balancing
+
+5. Thanh toán trực tuyến
+
+   - Tích hợp cổng thanh toán
+   - Xử lý giao dịch
+   - Bảo mật thanh toán
+   - Quản lý đơn hàng
+
+6. Báo cáo thống kê
+   - Thống kê doanh thu
+   - Báo cáo tồn kho
+   - Phân tích xu hướng
+   - Dashboard quản lý
+
+### 1.3. Phạm vi
+
+#### 1.3.1. Phạm vi chức năng
+
+1. Quản lý sách và danh mục
+
+   - Thêm, sửa, xóa thông tin sách
+
+     - Thông tin cơ bản (tên, tác giả, giá)
+     - Thông tin chi tiết (mô tả, số trang)
+     - Hình ảnh và tài liệu đính kèm
+     - Thông tin xuất bản
+
+   - Phân loại sách theo danh mục
+
+     - Danh mục chính và phụ
+     - Tags và keywords
+     - Tìm kiếm nâng cao
+     - Lọc theo nhiều tiêu chí
+
+   - Tìm kiếm và lọc sách
+
+     - Tìm kiếm theo từ khóa
+     - Lọc theo danh mục
+     - Lọc theo giá
+     - Lọc theo tác giả
+
+   - Quản lý kho sách
+     - Theo dõi số lượng
+     - Cảnh báo tồn kho
+     - Nhập xuất kho
+     - Báo cáo tồn kho
+
+2. Quản lý người dùng và phân quyền
+
+   - Đăng ký, đăng nhập
+
+     - Đăng ký tài khoản
+     - Xác thực email
+     - Đăng nhập đa phương thức
+     - Quản lý phiên đăng nhập
+
+   - Phân quyền người dùng
+
+     - Vai trò và quyền hạn
+     - Kiểm soát truy cập
+     - Quản lý nhóm người dùng
+     - Ghi log hoạt động
+
+   - Quản lý thông tin cá nhân
+
+     - Thông tin cơ bản
+     - Địa chỉ giao hàng
+     - Phương thức thanh toán
+     - Lịch sử hoạt động
+
+   - Lịch sử mua hàng
+     - Đơn hàng đã đặt
+     - Đơn hàng đang xử lý
+     - Đơn hàng đã hoàn thành
+     - Đánh giá sản phẩm
+
+3. Quản lý đơn hàng và thanh toán
+
+   - Tạo và quản lý giỏ hàng
+
+     - Thêm/xóa sản phẩm
+     - Cập nhật số lượng
+     - Lưu giỏ hàng
+     - Áp dụng mã giảm giá
+
+   - Xử lý đơn hàng
+
+     - Tạo đơn hàng mới
+     - Cập nhật trạng thái
+     - Hủy đơn hàng
+     - In hóa đơn
+
+   - Tích hợp thanh toán
+
+     - Thanh toán trực tuyến
+     - Thanh toán khi nhận hàng
+     - Hỗ trợ nhiều cổng thanh toán
+     - Xử lý hoàn tiền
+
+   - Theo dõi trạng thái đơn hàng
+     - Trạng thái đơn hàng
+     - Thông tin vận chuyển
+     - Thông báo cập nhật
+     - Lịch sử đơn hàng
+
+4. Báo cáo thống kê
+
+   - Thống kê doanh thu
+
+     - Doanh thu theo thời gian
+     - Doanh thu theo sản phẩm
+     - Doanh thu theo danh mục
+     - Báo cáo tài chính
+
+   - Báo cáo tồn kho
+
+     - Tồn kho hiện tại
+     - Dự báo tồn kho
+     - Cảnh báo tồn kho
+     - Báo cáo nhập xuất
+
+   - Phân tích xu hướng
+
+     - Xu hướng bán hàng
+     - Sản phẩm bán chạy
+     - Khách hàng tiềm năng
+     - Phân tích thị trường
+
+   - Báo cáo người dùng
+     - Thống kê người dùng
+     - Phân tích hành vi
+     - Báo cáo tương tác
+     - Đánh giá trải nghiệm
+
+#### 1.3.2. Phạm vi kỹ thuật
+
+1. Backend
+
+   - Spring Boot
+
+     - RESTful API
+     - Dependency Injection
+     - Security
+     - Data Access
+
+   - Spring Cloud
+     - Service Discovery
+     - Configuration
+     - Circuit Breaker
+     - API Gateway
+
+2. Frontend
+
+   - React.js
+
+     - Component-based
+     - State Management
+     - Routing
+     - Hooks
+
+   - TypeScript
+     - Type Safety
+     - Interfaces
+     - Generics
+     - Decorators
+
+3. Database
+
+   - PostgreSQL
+
+     - Relational Database
+     - Transactions
+     - Indexing
+     - Backup
+
+   - Redis
+     - Caching
+     - Session Management
+     - Message Queue
+     - Real-time Features
+
+4. DevOps
+
+   - Docker
+
+     - Containerization
+     - Image Management
+     - Networking
+     - Volume Management
+
+   - Jenkins
+     - CI/CD Pipeline
+     - Automated Testing
+     - Deployment
+     - Monitoring
+
+5. Monitoring
+
+   - Prometheus
+
+     - Metrics Collection
+     - Alerting
+     - Time Series Data
+     - Service Discovery
+
+   - Grafana
+     - Dashboard
+     - Visualization
+     - Alerting
+     - Reporting
+
+## Chương 2: Tìm hiểu công nghệ
+
+### 2.1. Tổng quan công nghệ
+
+#### 2.1.1. Kiến trúc microservices
+
+- Định nghĩa và đặc điểm
+- Ưu điểm và nhược điểm
+- Các mẫu kiến trúc phổ biến
+- Các thách thức và giải pháp
+
+#### 2.1.2. RESTful API
+
+- Nguyên tắc thiết kế
+- Best practices
+- Bảo mật API
+- Versioning
+
+#### 2.1.3. Message Queue
+
+- RabbitMQ
+- Kafka
+- Message patterns
+- Xử lý lỗi
+
+#### 2.1.4. Containerization
+
+- Docker
+- Docker Compose
+- Kubernetes
+- Container orchestration
+
+#### 2.1.5. CI/CD Pipeline
+
+- Jenkins
+- GitLab CI
+- Automated testing
+- Deployment automation
+
+### 2.2. Công nghệ Web (MVC) + DB
+
+#### 2.2.1. Spring Boot Framework
+
+- Dependency Injection
+- Spring MVC
+- Spring Security
+- Spring Data
+
+#### 2.2.2. Database
+
+- PostgreSQL
+
+  - Schema design
+  - Indexing
+  - Performance optimization
+  - Backup and recovery
+
+- Redis Cache
+  - Caching strategies
+  - Data structures
+  - Persistence
+  - Clustering
+
+#### 2.2.3. ORM
+
+- JPA/Hibernate
+- Entity relationships
+- Query optimization
+- Transaction management
+
+### 2.3. Công nghệ Back-End
+
+#### 2.3.1. Java 17
+
+- New features
+- Performance improvements
+- Memory management
+- Garbage collection
+
+#### 2.3.2. Spring Cloud
+
+- Service discovery
+- Configuration management
+- Circuit breaker
+- API Gateway
+
+#### 2.3.3. Security
+
+- JWT Authentication
+- OAuth2
+- Role-based access control
+- Security best practices
+
+#### 2.3.4. Resilience
+
+- Circuit breaker pattern
+- Retry mechanism
+- Fallback strategies
+- Bulkhead pattern
+
+### 2.4. Công nghệ Front-End
+
+#### 2.4.1. React.js
+
+- Component lifecycle
+- Hooks
+- State management
+- Performance optimization
+
+#### 2.4.2. Redux Toolkit
+
+- Store configuration
+- Reducers
+- Actions
+- Middleware
+
+#### 2.4.3. UI/UX
+
+- Material-UI
+- Responsive design
+- Accessibility
+- Performance
+
+#### 2.4.4. TypeScript
+
+- Type system
+- Interfaces
+- Generics
+- Best practices
+
+### 2.5. Các vấn đề khác
+
+#### 2.5.1. Version Control
+
+- Git workflow
+- Branching strategy
+- Code review
+- Continuous integration
+
+#### 2.5.2. Containerization
+
+- Docker best practices
+- Multi-stage builds
+- Security scanning
+- Resource optimization
+
+#### 2.5.3. Monitoring
+
+- Prometheus metrics
+- Grafana dashboards
+- Alerting
+- Logging
+
+#### 2.5.4. DevOps
+
+- Infrastructure as Code
+- Automated testing
+- Deployment strategies
+- Disaster recovery
+
+## Chương 3: Phân tích hệ thống
+
+### 3.1. Yêu cầu chức năng
+
+#### 3.1.1. Quản lý sách
+
+- CRUD operations
+- Tìm kiếm và lọc
+- Phân loại
+- Quản lý kho
+
+#### 3.1.2. Quản lý người dùng
+
+- Authentication
+- Authorization
+- Profile management
+- Activity tracking
+
+#### 3.1.3. Quản lý đơn hàng
+
+- Cart management
+- Order processing
+- Payment integration
+- Order tracking
+
+#### 3.1.4. Báo cáo
+
+- Sales analytics
+- Inventory reports
+- User statistics
+- Performance metrics
+
+### 3.2. Yêu cầu phi chức năng
+
+#### 3.2.1. Performance
+
+- Response time
+- Throughput
+- Scalability
+- Resource utilization
+
+#### 3.2.2. Security
+
+- Authentication
+- Authorization
+- Data encryption
+- Security compliance
+
+#### 3.2.3. Reliability
+
+- Fault tolerance
+- High availability
+- Disaster recovery
+- Data consistency
+
+#### 3.2.4. Maintainability
+
+- Code quality
+- Documentation
+- Testing
+- Deployment
+
+### 3.3. Phân tích rủi ro
+
+#### 3.3.1. Technical Risks
+
+- System performance
+- Security vulnerabilities
+- Data integrity
+- Integration issues
+
+#### 3.3.2. Operational Risks
+
+- Resource constraints
+- Skill gaps
+- Timeline delays
+- Budget overruns
+
+#### 3.3.3. Business Risks
+
+- Market competition
+- User adoption
+- Revenue targets
+- Regulatory compliance
+
+## Chương 4: Thiết kế hệ thống
+
+### 4.1. Tổng quan thiết kế
+
+#### 4.1.1. Kiến trúc tổng thể
+
+- Microservices architecture
+- Service boundaries
+- Communication patterns
+- Data flow
+
+#### 4.1.2. API Gateway
+
+- Routing
+- Load balancing
+- Security
+- Monitoring
+
+#### 4.1.3. Service Discovery
+
+- Service registration
+- Health checks
+- Load balancing
+- Failover
+
+#### 4.1.4. Circuit Breaker
+
+- Failure detection
+- Fallback mechanisms
+- Recovery strategies
+- Monitoring
+
+### 4.2. Decomposition (C4 Model)
+
+#### 4.2.1. System Context
+
+- Users
+- External systems
+- Core services
+- Integration points
+
+#### 4.2.2. Container
+
+- API Gateway
+- Authentication Service
+- Book Service
+- Order Service
+- Payment Service
+- User Service
+
+#### 4.2.3. Component
+
+- Controllers
+- Services
+- Repositories
+- Models
+
+#### 4.2.4. Module
+
+- Core Module
+- Security Module
+- Common Module
+
+### 4.3. Communication
+
+#### 4.3.1. RESTful API
+
+- API design
+- Versioning
+- Documentation
+- Testing
+
+#### 4.3.2. Message Queue
+
+- RabbitMQ
+- Message patterns
+- Error handling
+- Monitoring
+
+#### 4.3.3. gRPC
+
+- Service definition
+- Protocol buffers
+- Streaming
+- Error handling
+
+#### 4.3.4. WebSocket
+
+- Real-time updates
+- Connection management
+- Error handling
+- Security
+
+### 4.4. Data
+
+#### 4.4.1. Database Design
+
+- Schema design
+- Relationships
+- Indexing
+- Optimization
+
+#### 4.4.2. Caching Strategy
+
+- Redis implementation
+- Cache invalidation
+- Performance tuning
+- Monitoring
+
+#### 4.4.3. Data Models
+
+- Entity relationships
+- Validation rules
+- Business logic
+- Data access
+
+### 4.5. Deployment
+
+#### 4.5.1. Containerization
+
+- Docker configuration
+- Docker Compose
+- Resource limits
+- Security
+
+#### 4.5.2. Orchestration
+
+- Kubernetes setup
+- Service deployment
+- Scaling
+- Monitoring
+
+#### 4.5.3. CI/CD
+
+- Pipeline configuration
+- Automated testing
+- Deployment automation
+- Monitoring
+
+### 4.6. Resilience
+
+#### 4.6.1. Circuit Breaker
+
+- Implementation
+- Configuration
+- Monitoring
+- Recovery
+
+#### 4.6.2. Retry Pattern
+
+- Retry strategies
+- Backoff policies
+- Error handling
+- Monitoring
+
+#### 4.6.3. Health Checks
+
+- Implementation
+- Monitoring
+- Alerting
+- Recovery
+
+#### 4.6.4. Logging & Tracing
+
+- Log aggregation
+- Distributed tracing
+- Error tracking
+- Performance monitoring
+
+## Chương 5: Kết quả đạt được
+
+### 5.1. Kết quả kỹ thuật
+
+#### 5.1.1. Architecture
+
+- Microservices implementation
+- Service communication
+- Data management
+- Security implementation
+
+#### 5.1.2. Performance
+
+- Response times
+- Throughput
+- Resource utilization
+- Scalability
+
+#### 5.1.3. Security
+
+- Authentication
+- Authorization
+- Data protection
+- Compliance
+
+#### 5.1.4. Reliability
+
+- System availability
+- Fault tolerance
+- Data consistency
+- Recovery time
+
+### 5.2. Kết quả nghiệp vụ
+
+#### 5.2.1. Process Automation
+
+- Order processing
+- Inventory management
+- User management
+- Reporting
+
+#### 5.2.2. User Experience
+
+- Interface design
+- Navigation
+- Performance
+- Accessibility
+
+#### 5.2.3. Management
+
+- System monitoring
+- Resource allocation
+- Cost optimization
+- Maintenance
+
+#### 5.2.4. Analytics
+
+- Sales tracking
+- User behavior
+- Performance metrics
+- Business insights
+
+### 5.3. Hướng phát triển
+
+#### 5.3.1. Technical Improvements
+
+- AI/ML integration
+- Performance optimization
+- Security enhancements
+- Feature expansion
+
+#### 5.3.2. Business Growth
+
+- Market expansion
+- User acquisition
+- Revenue optimization
+- Partnership development
+
+#### 5.3.3. Innovation
+
+- New features
+- Technology adoption
+- Process improvement
+- User engagement
+
+---
+
+# SLIDE BÁO CÁO CUỐI KỲ
+
+## 1. Giới thiệu vấn đề
+
+- Vấn đề và giải pháp
+- Tầm quan trọng
+- Câu hỏi nghiên cứu
+- Hướng tiếp cận
+
+## 2. Tìm hiểu công nghệ
+
+- Tổng quan công nghệ
+- Backend Stack
+- Frontend Stack
+- DevOps Tools
+
+## 3. Chức năng hệ thống
+
+- Quản lý sách
+- Quản lý đơn hàng
+- Quản lý người dùng
+- Thanh toán
+- Báo cáo
+
+## 4. Giải pháp đề xuất
+
+- Kiến trúc microservices
+- C4 Model
+- Communication Patterns
+- Data Management
+- Deployment Strategy
+- Resilience Patterns
+
+## 5. Kết quả & Kết luận
+
+- Kết quả đạt được
+- Bài học kinh nghiệm
+- Hướng phát triển
+- Kết luận
