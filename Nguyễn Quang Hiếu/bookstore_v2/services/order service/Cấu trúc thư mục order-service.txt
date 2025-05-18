@@ -1,0 +1,65 @@
+order-service/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── orderservice/
+│   │   │               ├── OrderServiceApplication.java
+│   │   │               ├── config/
+│   │   │               │   ├── KafkaConfig.java
+│   │   │               │   ├── ModelMapperConfig.java
+│   │   │               │   └── WebClientConfig.java
+│   │   │               ├── controller/
+│   │   │               │   └── OrderController.java
+│   │   │               ├── dto/
+│   │   │               │   ├── BookDTO.java
+│   │   │               │   ├── CustomerDTO.java
+│   │   │               │   ├── InventoryDTO.java
+│   │   │               │   ├── OrderDTO.java
+│   │   │               │   ├── OrderItemDTO.java
+│   │   │               │   ├── OrderItemRequest.java
+│   │   │               │   ├── OrderRequest.java
+│   │   │               │   └── OrderStatusRequest.java
+│   │   │               ├── entity/
+│   │   │               │   ├── Order.java
+│   │   │               │   ├── OrderItem.java
+│   │   │               │   └── OrderStatus.java
+│   │   │               ├── event/
+│   │   │               │   ├── EventListener.java
+│   │   │               │   ├── OrderCreatedEvent.java
+│   │   │               │   ├── OrderStatusChangedEvent.java
+│   │   │               │   └── PaymentCompletedEvent.java
+│   │   │               ├── exception/
+│   │   │               │   ├── ErrorResponse.java
+│   │   │               │   ├── GlobalExceptionHandler.java
+│   │   │               │   ├── InsufficientStockException.java
+│   │   │               │   ├── OrderNotFoundException.java
+│   │   │               │   └── ValidationErrorResponse.java
+│   │   │               ├── repository/
+│   │   │               │   ├── OrderItemRepository.java
+│   │   │               │   └── OrderRepository.java
+│   │   │               └── service/
+│   │   │                   ├── OrderService.java
+│   │   │                   └── client/
+│   │   │                       ├── BookServiceClient.java
+│   │   │                       ├── CustomerServiceClient.java
+│   │   │                       └── InventoryServiceClient.java
+│   │   └── resources/
+│   │       ├── application.yml
+│   │       └── bootstrap.yml
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── bookstore/
+│                   └── orderservice/
+│                       ├── controller/
+│                       │   └── OrderControllerTest.java
+│                       ├── repository/
+│                       │   └── OrderRepositoryTest.java
+│                       └── service/
+│                           └── OrderServiceTest.java
+├── .gitignore
+├── Dockerfile
+├── pom.xml
+└── README.md

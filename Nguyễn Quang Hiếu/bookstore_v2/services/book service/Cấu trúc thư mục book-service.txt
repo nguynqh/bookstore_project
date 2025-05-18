@@ -1,0 +1,22 @@
+book-service/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── bookservice/
+│   │   │               ├── BookServiceApplication.java
+│   │   │               ├── config/
+│   │   │               ├── controller/
+│   │   │               ├── dto/
+│   │   │               ├── entity/
+│   │   │               ├── event/
+│   │   │               ├── exception/
+│   │   │               ├── repository/
+│   │   │               └── service/
+│   │   └── resources/
+│   │       ├── application.yml
+│   │       └── bootstrap.yml
+│   └── test/
+├── Dockerfile
+└── pom.xml

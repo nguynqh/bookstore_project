@@ -1,0 +1,51 @@
+inventory-service/
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── inventoryservice/
+│   │   │               ├── InventoryServiceApplication.java
+│   │   │               ├── config/
+│   │   │               │   ├── KafkaConsumerConfig.java
+│   │   │               │   └── RestTemplateConfig.java
+│   │   │               ├── controller/
+│   │   │               │   └── InventoryController.java
+│   │   │               ├── dto/
+│   │   │               │   ├── InventoryDTO.java
+│   │   │               │   ├── InventoryTransactionDTO.java
+│   │   │               │   ├── InventoryUpdateRequest.java
+│   │   │               │   ├── BookDTO.java
+│   │   │               │   └── OrderItemDTO.java
+│   │   │               ├── entity/
+│   │   │               │   ├── Inventory.java
+│   │   │               │   └── InventoryTransaction.java
+│   │   │               ├── event/
+│   │   │               │   ├── EventListener.java
+│   │   │               │   ├── InventoryUpdatedEvent.java
+│   │   │               │   └── OrderCreatedEvent.java
+│   │   │               ├── exception/
+│   │   │               │   ├── GlobalExceptionHandler.java
+│   │   │               │   ├── InsufficientStockException.java
+│   │   │               │   └── InventoryNotFoundException.java
+│   │   │               ├── repository/
+│   │   │               │   ├── InventoryRepository.java
+│   │   │               │   └── InventoryTransactionRepository.java
+│   │   │               └── service/
+│   │   │                   ├── InventoryService.java
+│   │   │                   └── InventoryServiceImpl.java
+│   │   └── resources/
+│   │       ├── application.yml
+│   │       ├── bootstrap.yml
+│   │       └── schema.sql
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── bookstore/
+│                   └── inventoryservice/
+│                       ├── controller/
+│                       │   └── InventoryControllerTest.java
+│                       └── service/
+│                           └── InventoryServiceTest.java
+└── Dockerfile
