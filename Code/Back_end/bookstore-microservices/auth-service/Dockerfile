@@ -1,4 +1,9 @@
-FROM ubuntu:latest
-LABEL authors="mequa"
+FROM openjdk:17-jdk-slim
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY target/auth-service-1.0.0.jar app.jar
+
+EXPOSE 8085
+
+ENTRYPOINT ["java", "-jar", "app.jar"]

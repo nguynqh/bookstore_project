@@ -48,3 +48,15 @@ customer-service/
 ├── Dockerfile
 ├── pom.xml
 └── README.md
+
+
+
+
+spring-boot-starter-web
+spring-boot-starter-data-jpa
+spring-boot-starter-validation
+spring-boot-starter-actuator
+spring-cloud-starter-netflix-eureka-client
+PostgreSQL
+Lombok
+modelmapper

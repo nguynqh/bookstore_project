@@ -1,0 +1,41 @@
+search-service/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── searchservice/
+│   │   │               ├── SearchServiceApplication.java
+│   │   │               ├── config/
+│   │   │               │   ├── ElasticsearchConfig.java
+│   │   │               │   ├── KafkaConsumerConfig.java
+│   │   │               │   └── WebConfig.java
+│   │   │               ├── controller/
+│   │   │               │   └── SearchController.java
+│   │   │               ├── document/
+│   │   │               │   └── BookDocument.java
+│   │   │               ├── dto/
+│   │   │               │   ├── BookSearchDTO.java
+│   │   │               │   ├── SearchRequest.java
+│   │   │               │   └── SearchResponse.java
+│   │   │               ├── event/
+│   │   │               │   ├── BookEvent.java
+│   │   │               │   └── BookEventListener.java
+│   │   │               ├── repository/
+│   │   │               │   └── BookSearchRepository.java
+│   │   │               └── service/
+│   │   │                   └── SearchService.java
+│   │   └── resources/
+│   │       └── application.yml
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── bookstore/
+│                   └── searchservice/
+│                       ├── SearchServiceApplicationTests.java
+│                       ├── controller/
+│                       │   └── SearchControllerTests.java
+│                       └── service/
+│                           └── SearchServiceTests.java
+├── Dockerfile
+└── pom.xml

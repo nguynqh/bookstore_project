@@ -1,4 +1,9 @@
-FROM ubuntu:latest
-LABEL authors="mequa"
+FROM openjdk:17-jdk-slim
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY target/payment-service-0.0.1-SNAPSHOT.jar payment-service.jar
+
+EXPOSE 8086
+
+ENTRYPOINT ["java", "-jar", "payment-service.jar"]
