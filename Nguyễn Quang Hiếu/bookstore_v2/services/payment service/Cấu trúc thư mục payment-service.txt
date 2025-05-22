@@ -1,0 +1,37 @@
+payment-service/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── paymentservice/
+│   │   │               ├── PaymentServiceApplication.java
+│   │   │               ├── config/
+│   │   │               │   ├── KafkaConfig.java
+│   │   │               │   └── RestTemplateConfig.java
+│   │   │               ├── controller/
+│   │   │               │   └── PaymentController.java
+│   │   │               ├── dto/
+│   │   │               │   ├── OrderDTO.java
+│   │   │               │   ├── PaymentDTO.java
+│   │   │               │   ├── PaymentRequest.java
+│   │   │               │   └── RefundRequest.java
+│   │   │               ├── entity/
+│   │   │               │   ├── Payment.java
+│   │   │               │   └── Refund.java
+│   │   │               ├── event/
+│   │   │               │   ├── OrderEventConsumer.java
+│   │   │               │   └── PaymentEvent.java
+│   │   │               ├── exception/
+│   │   │               │   ├── GlobalExceptionHandler.java
+│   │   │               │   └── PaymentException.java
+│   │   │               ├── repository/
+│   │   │               │   ├── PaymentRepository.java
+│   │   │               │   └── RefundRepository.java
+│   │   │               └── service/
+│   │   │                   ├── PaymentService.java
+│   │   │                   └── PaymentServiceImpl.java
+│   │   └── resources/
+│   │       └── application.yml
+│   └── test/
+└── pom.xml

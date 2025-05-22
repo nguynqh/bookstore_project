@@ -1,0 +1,42 @@
+auth-service/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── authservice/
+│   │   │               ├── AuthServiceApplication.java
+│   │   │               ├── config/
+│   │   │               │   ├── SecurityConfig.java
+│   │   │               │   └── JwtConfig.java
+│   │   │               ├── controller/
+│   │   │               │   ├── AuthController.java
+│   │   │               │   └── UserController.java
+│   │   │               ├── dto/
+│   │   │               │   ├── JwtResponse.java
+│   │   │               │   ├── LoginRequest.java
+│   │   │               │   ├── RegisterRequest.java
+│   │   │               │   └── UserDTO.java
+│   │   │               ├── entity/
+│   │   │               │   ├── Employee.java
+│   │   │               │   ├── Permission.java
+│   │   │               │   ├── Role.java
+│   │   │               │   └── User.java
+│   │   │               ├── exception/
+│   │   │               │   ├── GlobalExceptionHandler.java
+│   │   │               │   └── UserAlreadyExistsException.java
+│   │   │               ├── repository/
+│   │   │               │   ├── EmployeeRepository.java
+│   │   │               │   ├── PermissionRepository.java
+│   │   │               │   ├── RoleRepository.java
+│   │   │               │   └── UserRepository.java
+│   │   │               ├── security/
+│   │   │               │   ├── JwtAuthenticationEntryPoint.java
+│   │   │               │   ├── JwtAuthenticationFilter.java
+│   │   │               │   ├── JwtProvider.java
+│   │   │               │   └── UserDetailsServiceImpl.java
+│   │   │               └── service/
+│   │   │                   ├── AuthService.java
+│   │   │                   └── UserService.java
+│   │   └── resources/
+│   │       └── application.yml
