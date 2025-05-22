@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "fullName": "Admin",
+    "email": "admin@example.com",
+    "role": "admin",
+    "orders": []
+  },
+  {
+    "username": "aa",
+    "password": "123",
+    "email": "izzy@gmail.com",
+    "fullName": "Đoàn Minh Khôi",
+    "id": 2,
+    "role": "user",
+    "orders": [],
+    "phone": "",
+    "address": "dd",
+    "city": "",
+    "state": "",
+    "zip": "",
+    "country": ""
+  },
+  {
+    "username": "izzy",
+    "password": "2112",
+    "email": "khoiminhdoaw4@gmail.com",
+    "fullName": "gà",
+    "id": 3,
+    "role": "user",
+    "orders": [],
+    "phone": "",
+    "address": "",
+    "city": "",
+    "state": "",
+    "zip": "",
+    "country": ""
+  }
+]

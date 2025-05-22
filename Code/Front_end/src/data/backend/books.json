@@ -1,0 +1,224 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Đắc Nhân Tâm",
+      "author": "Dale Carnegie",
+      "price": 89000,
+      "category": "Kỹ năng sống",
+      "description": "Cuốn sách nổi tiếng về nghệ thuật đối nhân xử thế",
+      "stock": 50,
+      "image": "https://example.com/dac-nhan-tam.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Nhà Giả Kim",
+      "author": "Paulo Coelho",
+      "price": 75000,
+      "category": "Tiểu thuyết",
+      "description": "Câu chuyện về hành trình tìm kiếm kho báu và ý nghĩa cuộc sống",
+      "stock": 30,
+      "image": "https://example.com/nha-gia-kim.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Tôi Thấy Hoa Vàng Trên Cỏ Xanh",
+      "author": "Nguyễn Nhật Ánh",
+      "price": 125000,
+      "category": "Tiểu thuyết",
+      "description": "Tác phẩm nổi tiếng về tuổi thơ và tình bạn",
+      "stock": 45,
+      "image": "https://example.com/toi-thay-hoa-vang.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Cà Phê Cùng Tony ",
+      "author": "Tony Buổi Sáng",
+      "price": 68000,
+      "category": "Kỹ năng sống",
+      "description": "Những bài học về cuộc sống và kinh doanh",
+      "stock": 60,
+      "image": "https://example.com/ca-phe-cung-tony.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Tuổi Trẻ Đáng Giá Bao Nhiêu",
+      "author": "Rosie Nguyễn",
+      "price": 72000,
+      "category": "Kỹ năng sống",
+      "description": "Câu chuyện về hành trình khám phá bản thân",
+      "stock": 40,
+      "image": "https://example.com/tuoi-tre-dang-gia-bao-nhieu.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Người Giàu Có Nhất Thành Babylon",
+      "author": "George S. Clason",
+      "price": 65000,
+      "category": "Kinh tế",
+      "description": "Những nguyên tắc làm giàu từ xa xưa",
+      "stock": 35,
+      "image": "https://example.com/nguoi-giau-co-nhat-thanh-babylon.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Đọc Vị Bất Kỳ Ai",
+      "author": "David J. Lieberman",
+      "price": 78000,
+      "category": "Tâm lý học",
+      "description": "Nghệ thuật thấu hiểu người khác",
+      "stock": 55,
+      "image": "https://example.com/doc-vi-bat-ky-ai.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Nhà Lãnh Đạo Không Chức Danh",
+      "author": "Robin Sharma",
+      "price": 85000,
+      "category": "Kỹ năng lãnh đạo",
+      "description": "Phát triển khả năng lãnh đạo trong mọi hoàn cảnh",
+      "stock": 42,
+      "image": "https://example.com/nha-lanh-dao-khong-chuc-danh.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Đời Ngắn Đừng Ngủ Dài",
+      "author": "Robin Sharma",
+      "price": 69000,
+      "category": "Kỹ năng sống",
+      "description": "Những bài học về cách sống có ý nghĩa",
+      "stock": 48,
+      "image": "https://example.com/doi-ngan-dung-ngu-dai.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Khéo Ăn Nói Sẽ Có Được Thiên Hạ",
+      "author": "Trác Nhã",
+      "price": 72000,
+      "category": "Kỹ năng giao tiếp",
+      "description": "Nghệ thuật giao tiếp hiệu quả",
+      "stock": 65,
+      "image": "https://example.com/kheo-an-noi-se-co-duoc-thien-ha.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Tôi Tài Giỏi, Bạn Cũng Thế",
+      "author": "Adam Khoo",
+      "price": 88000,
+      "category": "Kỹ năng học tập",
+      "description": "Phương pháp học tập hiệu quả",
+      "stock": 52,
+      "image": "https://example.com/toi-tai-gioi-ban-cung-the.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Đừng Bao Giờ Đi Ăn Một Mình",
+      "author": "Keith Ferrazzi",
+      "price": 95000,
+      "category": "Kỹ năng giao tiếp",
+      "description": "Nghệ thuật xây dựng mối quan hệ",
+      "stock": 38,
+      "image": "https://example.com/dung-bao-gio-di-an-mot-minh.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Người Bán Hàng Vĩ Đại Nhất Thế Giới",
+      "author": "Og Mandino",
+      "price": 82000,
+      "category": "Kinh doanh",
+      "description": "Bí quyết thành công trong bán hàng",
+      "stock": 45,
+      "image": "https://example.com/nguoi-ban-hang-vi-dai-nhat-the-gioi.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Dám Thất Bại",
+      "author": "Billi P.S. Lim",
+      "price": 68000,
+      "category": "Kỹ năng sống",
+      "description": "Học cách đối mặt với thất bại",
+      "stock": 58,
+      "image": "https://example.com/dam-that-bai.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Đừng Lựa Chọn An Nhàn Khi Còn Trẻ",
+      "author": "Cảnh Thiên",
+      "price": 72000,
+      "category": "Kỹ năng sống",
+      "description": "Những bài học về sự nỗ lực",
+      "stock": 47,
+      "image": "https://example.com/dung-lua-chon-an-nhan-khi-con-tre.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Nghĩ Giàu Làm Giàu",
+      "author": "Napoleon Hill",
+      "price": 89000,
+      "category": "Kinh doanh",
+      "description": "Bí quyết làm giàu từ những người thành công",
+      "stock": 62,
+      "image": "https://example.com/nghi-giau-lam-giau.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Quẳng Gánh Lo Đi Và Vui Sống",
+      "author": "Dale Carnegie",
+      "price": 75000,
+      "category": "Tâm lý học",
+      "description": "Cách vượt qua lo lắng và sống hạnh phúc",
+      "stock": 53,
+      "image": "https://example.com/quang-ganh-lo-di-va-vui-song.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Đọc Sách Như Một Nghệ Thuật",
+      "author": "Mortimer J. Adler",
+      "price": 82000,
+      "category": "Kỹ năng đọc",
+      "description": "Phương pháp đọc sách hiệu quả",
+      "stock": 40,
+      "image": "https://example.com/doc-sach-nhu-mot-nghe-thuat.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Tư Duy Nhanh Và Chậm",
+      "author": "Daniel Kahneman",
+      "price": 128000,
+      "category": "Tâm lý học",
+      "description": "Khám phá về cách bộ não hoạt động",
+      "stock": 35,
+      "image": "https://example.com/tu-duy-nhanh-va-cham.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Sức Mạnh Của Thói Quen",
+      "author": "Charles Duhigg",
+      "price": 95000,
+      "category": "Kỹ năng sống",
+      "description": "Cách thay đổi thói quen để thành công",
+      "stock": 48,
+      "image": "https://example.com/suc-manh-cua-thoi-quen.jpg"
+    },
+    {
+      "id": 22,
+      "title": "Khéo Ăn Nói Sẽ Có Được Thiên Hạ",
+      "author": "Trác Nhã",
+      "price": 72000,
+      "category": "Kỹ năng giao tiếp",
+      "description": "Nghệ thuật giao tiếp hiệu quả",
+      "stock": 55,
+      "image": "https://example.com/kheo-an-noi-se-co-duoc-thien-ha.jpg"
+    },
+    {
+      "id": 23,
+      "title": "Tôi Tài Giỏi, Bạn Cũng Thế",
+      "author": "Adam Khoo",
+      "price": 88000,
+      "category": "Kỹ năng học tập",
+      "description": "Phương pháp học tập hiệu quả",
+      "stock": 60,
+      "image": "https://example.com/toi-tai-gioi-ban-cung-the.jpg"
+    }
+  ]
+}

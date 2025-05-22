@@ -1,0 +1,234 @@
+{
+    "books": [
+      {
+        "id": 1,
+        "title": "Đắc Nhân Tâm",
+        "author": "Dale Carnegie",
+        "price": 89000,
+        "category": "Kỹ năng sống",
+        "description": "Cuốn sách nổi tiếng về nghệ thuật đối nhân xử thế",
+        "stock": 50,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/d/n/dntttttuntitled_1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Nhà Giả Kim",
+        "author": "Paulo Coelho",
+        "price": 75000,
+        "category": "Tiểu thuyết",
+        "description": "Câu chuyện về hành trình tìm kiếm kho báu và ý nghĩa cuộc sống",
+        "stock": 30,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/i/m/image_195509_1_36793.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Tôi Thấy Hoa Vàng Trên Cỏ Xanh",
+        "author": "Nguyễn Nhật Ánh",
+        "price": 125000,
+        "category": "Tiểu thuyết",
+        "description": "Tác phẩm nổi tiếng về tuổi thơ và tình bạn",
+        "stock": 45,
+        "image": "https://upload.wikimedia.org/wikipedia/vi/3/3d/T%C3%B4i_th%E1%BA%A5y_hoa_v%C3%A0ng_tr%C3%AAn_c%E1%BB%8F_xanh.jpg?20210623204138"
+      },
+      {
+        "id": 4,
+        "title": "Cà Phê Cùng Tony",
+        "author": "Tony Buổi Sáng",
+        "price": 68000,
+        "category": "Kỹ năng sống",
+        "description": "Những bài học về cuộc sống và kinh doanh",
+        "stock": 60,
+        "image": "https://salt.tikicdn.com/cache/750x750/ts/product/57/c6/21/f044a829efddd57dfad606d84067ae75.jpg.webp"
+      },
+      {
+        "id": 5,
+        "title": "Tuổi Trẻ Đáng Giá Bao Nhiêu",
+        "author": "Rosie Nguyễn",
+        "price": 72000,
+        "category": "Kỹ năng sống",
+        "description": "Câu chuyện về hành trình khám phá bản thân",
+        "stock": 40,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/i/m/image_239651.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Người Giàu Có Nhất Thành Babylon",
+        "author": "George S. Clason",
+        "price": 65000,
+        "category": "Kinh tế",
+        "description": "Những nguyên tắc làm giàu từ xa xưa",
+        "stock": 35,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/8/9/8935092559896.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Đọc Vị Bất Kỳ Ai",
+        "author": "David J. Lieberman",
+        "price": 78000,
+        "category": "Tâm lý học",
+        "description": "Nghệ thuật thấu hiểu người khác",
+        "stock": 55,
+        "image": "https://salt.tikicdn.com/cache/750x750/ts/product/e1/a3/08/0145ac6cf00037cb4e8dcaee2355670c.png.webp"
+      },
+      {
+        "id": 8,
+        "title": "Nhà Lãnh Đạo Không Chức Danh",
+        "author": "Robin Sharma",
+        "price": 85000,
+        "category": "Kỹ năng lãnh đạo",
+        "description": "Phát triển khả năng lãnh đạo trong mọi hoàn cảnh",
+        "stock": 42,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/8/9/8934974179184.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Đời Ngắn Đừng Ngủ Dài",
+        "author": "Robin Sharma",
+        "price": 69000,
+        "category": "Kỹ năng sống",
+        "description": "Những bài học về cách sống có ý nghĩa",
+        "stock": 48,
+        "image": "https://cdn0.fahasa.com/media/catalog/product/8/9/8934974190608.jpg"
+      },
+      {
+        "id": 10,
+        "title": "Khéo Ăn Nói Sẽ Có Được Thiên Hạ",
+        "author": "Trác Nhã",
+        "price": 72000,
+        "category": "Kỹ năng giao tiếp",
+        "description": "Nghệ thuật giao tiếp hiệu quả",
+        "stock": 65,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/8/9/8936067605693.jpg"
+      },
+      {
+        "id": 11,
+        "title": "Tôi Tài Giỏi, Bạn Cũng Thế",
+        "author": "Adam Khoo",
+        "price": 88000,
+        "category": "Kỹ năng học tập",
+        "description": "Phương pháp học tập hiệu quả",
+        "stock": 52,
+        "image": "https://th.bing.com/th/id/R.29814a1b6ac6efd7c40139c74c1fa466?rik=M1n7Ls7BFSdZCw&pid=ImgRaw&r=0"
+      },
+      {
+        "id": 12,
+        "title": "Đừng Bao Giờ Đi Ăn Một Mình",
+        "author": "Keith Ferrazzi",
+        "price": 95000,
+        "category": "Kỹ năng giao tiếp",
+        "description": "Nghệ thuật xây dựng mối quan hệ",
+        "stock": 38,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/8/9/8934974180630.jpg"
+      },
+      {
+        "id": 13,
+        "title": "Người Bán Hàng Vĩ Đại Nhất Thế Giới",
+        "author": "Og Mandino",
+        "price": 82000,
+        "category": "Kinh doanh",
+        "description": "Bí quyết thành công trong bán hàng",
+        "stock": 45,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/i/m/image_195509_1_47973.jpg"
+      },
+      {
+        "id": 14,
+        "title": "Dám Thất Bại",
+        "author": "Billi P.S. Lim",
+        "price": 68000,
+        "category": "Kỹ năng sống",
+        "description": "Học cách đối mặt với thất bại",
+        "stock": 58,
+        "image": "https://cdn0.fahasa.com/media/catalog/product/9/7/9786044018119.jpg"
+      },
+      {
+        "id": 15,
+        "title": "Đừng Lựa Chọn An Nhàn Khi Còn Trẻ",
+        "author": "Cảnh Thiên",
+        "price": 72000,
+        "category": "Kỹ năng sống",
+        "description": "Những bài học về sự nỗ lực",
+        "stock": 47,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/1/_/1.-bia-truoc.jpg"
+      },
+      {
+        "id": 16,
+        "title": "Nghĩ Giàu Làm Giàu",
+        "author": "Napoleon Hill",
+        "price": 89000,
+        "category": "Kinh doanh",
+        "description": "Bí quyết làm giàu từ những người thành công",
+        "stock": 62,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/n/g/nghigiaulamgiau_110k-01_bia-1.jpg"
+      },
+      {
+        "id": 17,
+        "title": "Quẳng Gánh Lo Đi Và Vui Sống",
+        "author": "Dale Carnegie",
+        "price": 75000,
+        "category": "Tâm lý học",
+        "description": "Cách vượt qua lo lắng và sống hạnh phúc",
+        "stock": 53,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/q/u/qu_ng-g_nh-lo-_i-v_-vui-s_ng_2.jpg?_gl=1*9ifxm0*_ga*OTIwODM1NTc5LjE3NDc5MTg2NTg.*_ga_D3YYPWQ9LN*czE3NDc5MTg2NTckbzEkZzEkdDE3NDc5MTk3NTEkajAkbDAkaDA.*_gcl_au*NDM1ODA4NDMwLjE3NDc5MTg2NTg.*_ga_460L9JMC2G*czE3NDc5MTg2NTckbzEkZzEkdDE3NDc5MTk3NTIkajU3JGwwJGgzMTE3MjkzODkkZFdLeGtIV3VZcUUwTnNRQXJ4SFk4eS00NmlYbXZ6LTExYWc."
+      },
+      {
+        "id": 18,
+        "title": "Đọc Sách Như Một Nghệ Thuật",
+        "author": "Mortimer J. Adler",
+        "price": 82000,
+        "category": "Kỹ năng đọc",
+        "description": "Phương pháp đọc sách hiệu quả",
+        "stock": 40,
+        "image": "https://taisachhay.net/wp-content/uploads/2017/11/doc-sach-nhu-mot-nghe-thuat-pdf.jpg"
+      },
+      {
+        "id": 19,
+        "title": "Tư Duy Nhanh Và Chậm",
+        "author": "Daniel Kahneman",
+        "price": 128000,
+        "category": "Tâm lý học",
+        "description": "Khám phá về cách bộ não hoạt động",
+        "stock": 35,
+        "image": "https://cdn1.fahasa.com/media/catalog/product/i/m/image_230367.jpg"
+      },
+      {
+        "id": 20,
+        "title": "Sức Mạnh Của Thói Quen",
+        "author": "Charles Duhigg",
+        "price": 95000,
+        "category": "Kỹ năng sống",
+        "description": "Cách thay đổi thói quen để thành công",
+        "stock": 48,
+        "image": "https://cdn1.fahasa.com/media/wysiwyg/HONG_KD/FRAME_NCC_2024/FrameNCC_T05_1080x1080.png"
+      },
+      {
+        "id": 21,
+        "title": "Đời Ngắn Đừng Ngủ Dài",
+        "author": "Robin Sharma",
+        "price": 69000,
+        "category": "Kỹ năng sống",
+        "description": "Những bài học về cách sống có ý nghĩa",
+        "stock": 42,
+        "image": "https://cdn0.fahasa.com/media/catalog/product/d/o/doi-ngan-dung-ngu-dai-tai-ban-2022_1.jpg"
+      },
+      {
+        "id": 22,
+        "title": "Khéo Ăn Nói Sẽ Có Được Thiên Hạ",
+        "author": "Trác Nhã",
+        "price": 72000,
+        "category": "Kỹ năng giao tiếp",
+        "description": "Nghệ thuật giao tiếp hiệu quả",
+        "stock": 55,
+        "image": "https://cdn0.fahasa.com/media/catalog/product/i/m/image_240038.jpg"
+      },
+      {
+        "id": 23,
+        "title": "Tôi Tài Giỏi, Bạn Cũng Thế",
+        "author": "Adam Khoo",
+        "price": 88000,
+        "category": "Kỹ năng học tập",
+        "description": "Phương pháp học tập hiệu quả",
+        "stock": 60,
+        "image": "https://cdn0.fahasa.com/media/catalog/product/i/m/image_195509_1_46820.jpg"
+      }
+    ]
+  }

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import BookList from '../components/BookList';
 import './BooksPage.css';
-import allBooks from '../data/books';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { getAllBooks, deleteBook } from '../services/bookService';
+import { message, Popconfirm } from 'antd';
+import { EditOutlined, DeleteOutlined, EyeOutlined } from '@ant-design/icons';
 
 const BooksPage = () => {
   const [books, setBooks] = useState([]);
@@ -15,13 +17,23 @@ const BooksPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const categories = [...new Set(allBooks.map(book => book.category))];
+  // Lấy danh sách sách từ API
+  const fetchBooks = async () => {
+    try {
+      setLoading(true);
+      const data = await getAllBooks();
+      setBooks(data || []); // Đảm bảo books luôn là một mảng
+    } catch (error) {
+      console.error('Error fetching books:', error);
+      message.error('Lỗi khi tải danh sách sách. Vui lòng kiểm tra kết nối với server.');
+      setBooks([]); // Đặt books thành mảng rỗng nếu có lỗi
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    setTimeout(() => {
-      setBooks(allBooks);
-      setLoading(false);
-    }, 1000);
+    fetchBooks();
   }, []);
 
   useEffect(() => {
@@ -32,20 +44,48 @@ const BooksPage = () => {
     }
   }, [location]);
 
+  // Lấy danh sách thể loại từ books, đảm bảo books là mảng
+  const categories = books && books.length > 0 
+    ? [...new Set(books.map(book => book.category))]
+    : [];
+
   const handleSort = (books) => {
+    if (!books || !Array.isArray(books)) return [];
+    
     if (sortOrder === 'A-Z') {
-      return books.sort((a, b) => a.title.localeCompare(b.title));
+      return [...books].sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortOrder === 'Z-A') {
-      return books.sort((a, b) => b.title.localeCompare(a.title));
+      return [...books].sort((a, b) => b.title.localeCompare(a.title));
     }
     return books;
   };
 
   const handleFilter = (books) => {
+    if (!books || !Array.isArray(books)) return [];
+    
     if (selectedCategory) {
       return books.filter(book => book.category === selectedCategory);
     }
     return books;
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteBook(id);
+      message.success('Xóa sách thành công');
+      fetchBooks(); // Tải lại danh sách sách sau khi xóa
+    } catch (error) {
+      console.error('Error deleting book:', error);
+      message.error('Lỗi khi xóa sách. Vui lòng thử lại sau.');
+    }
+  };
+
+  const handleView = (book) => {
+    navigate(`/book/${book.id}`);
+  };
+
+  const handleEdit = (book) => {
+    navigate(`/book/edit/${book.id}`);
   };
 
   const filteredBooks = handleSort(handleFilter(books)).filter(book =>
@@ -65,6 +105,77 @@ const BooksPage = () => {
   const handleAddbooks = () => {
     navigate('/book/add');
   };
+
+  // Cấu hình cột cho bảng
+  const columns = [
+    {
+      title: 'ID',
+      dataIndex: 'id',
+      key: 'id',
+    },
+    {
+      title: 'Name',
+      dataIndex: 'title',
+      key: 'title',
+    },
+    {
+      title: 'Author',
+      dataIndex: 'author',
+      key: 'author',
+    },
+    {
+      title: 'Price',
+      dataIndex: 'price',
+      key: 'price',
+      render: (price) => `${price.toLocaleString('vi-VN')} VNĐ`,
+    },
+    {
+      title: 'Category',
+      dataIndex: 'category',
+      key: 'category',
+    },
+    {
+      title: 'Stock',  
+      dataIndex: 'stock',
+      key: 'stock',
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (_, record) => (
+        <div className="action-buttons">
+          <button
+            className="action-button view"
+            onClick={() => handleView(record)}
+            title="View"
+          >
+            <EyeOutlined />
+          </button>
+          <button
+            className="action-button edit"
+            onClick={() => handleEdit(record)}
+            title="Edit"
+          >
+            <EditOutlined />
+          </button>
+          <Popconfirm
+            title="Delete book"
+            description="Are you sure you want to delete this book?"
+            onConfirm={() => handleDelete(record.id)}
+            okText="Yes"
+            cancelText="No"
+          >
+            <button
+              className="action-button delete"
+              title="Delete"
+            >
+              <DeleteOutlined />
+            </button>
+          </Popconfirm>
+        </div>
+      ),
+    },
+  ];
 
   return (
     <div className="books-page">
@@ -101,9 +212,11 @@ const BooksPage = () => {
 
         {loading ? (
           <div className="loading">Loading books...</div>
+        ) : books.length === 0 ? (
+          <div className="no-books">Không có sách nào. Vui lòng thêm sách mới.</div>
         ) : (
           <>
-            <BookList books={currentBooks} />
+            <BookList books={currentBooks} columns={columns} />
 
             <div className="pagination">
               <button

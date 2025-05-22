@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import allBooks from '../data/books';
+import booksData from '../data/books.json';
 import './AddEditBookPage.css';
 
 const AddEditBookPage = () => {
@@ -32,7 +32,7 @@ const AddEditBookPage = () => {
     if (isEditMode) {
       // Simulate fetching book data for editing
       setTimeout(() => {
-        const bookToEdit = allBooks.find(book => book.id === parseInt(id));
+        const bookToEdit = booksData.books.find(book => book.id === parseInt(id));
         if (bookToEdit) {
           setFormData({
             title: bookToEdit.title || '',
