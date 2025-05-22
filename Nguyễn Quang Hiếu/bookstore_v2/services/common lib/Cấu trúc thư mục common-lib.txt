@@ -1,0 +1,22 @@
+common-lib/
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── bookstore/
+│   │               └── common/
+│   │                   ├── dto/
+│   │                   │   ├── ErrorResponse.java
+│   │                   │   └── PagedResponse.java
+│   │                   ├── event/
+│   │                   │   ├── BookEvent.java
+│   │                   │   ├── OrderEvent.java
+│   │                   │   ├── InventoryEvent.java
+│   │                   │   └── PaymentEvent.java
+│   │                   ├── exception/
+│   │                   │   └── BaseException.java
+│   │                   └── util/
+│   │                       ├── DateUtils.java
+│   │                       └── ValidationUtils.java
+│   └── test/
+└── pom.xml

@@ -1,0 +1,92 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        # Auth Service Routes
+        - id: auth-service
+          uri: http://auth-service:8081
+          predicates:
+            - Path=/api/auth/**, /api/users/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
+        # Book Service Routes
+        - id: book-service
+          uri: http://book-service:8081
+          predicates:
+            - Path=/api/books/**, /api/categories/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
+        # Order Service Routes
+        - id: order-service
+          uri: http://order-service:8082
+          predicates:
+            - Path=/api/orders/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
+        # Customer Service Routes
+        - id: customer-service
+          uri: http://customer-service:8083
+          predicates:
+            - Path=/api/customers/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
+        # Inventory Service Routes
+        - id: inventory-service
+          uri: http://inventory-service:8084
+          predicates:
+            - Path=/api/inventory/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
+        # Payment Service Routes
+        - id: payment-service
+          uri: http://payment-service:8085
+          predicates:
+            - Path=/api/payments/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
+        # Search Service Routes
+        - id: search-service
+          uri: http://search-service:8086
+          predicates:
+            - Path=/api/search/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
+# JWT Configuration
+jwt:
+  secret: bookstoreSecretKey123456789012345678901234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
+  expiration: 86400000  # 24 hours in milliseconds
+
+# Public paths that don't require authentication
+public:
+  paths: /api/auth/login,/api/auth/register,/api/auth/refresh,/api/search/books,/api/books,/actuator/**
+
+# Actuator settings
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always

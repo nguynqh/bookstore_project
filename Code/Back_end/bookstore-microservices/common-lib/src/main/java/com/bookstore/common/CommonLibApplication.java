@@ -1,12 +1,13 @@
-package com.bookstore.apigateway;
+package com.bookstore.common;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiGatewayApplication {
+public class CommonLibApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiGatewayApplication.class, args);
+		SpringApplication.run(CommonLibApplication.class, args);
 	}
+
 }

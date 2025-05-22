@@ -1,0 +1,25 @@
+api-gateway/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── bookstore/
+│   │   │           └── apigateway/
+│   │   │               ├── ApiGatewayApplication.java
+│   │   │               ├── config/
+│   │   │               │   ├── GatewayConfig.java
+│   │   │               │   └── SecurityConfig.java
+│   │   │               ├── filter/
+│   │   │               │   ├── AuthenticationFilter.java
+│   │   │               │   └── LoggingFilter.java
+│   │   │               └── exception/
+│   │   │                   └── GlobalExceptionHandler.java
+│   │   └── resources/
+│   │       └── application.yml
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── bookstore/
+│                   └── apigateway/
+│                       └── ApiGatewayApplicationTests.java
+└── pom.xml
